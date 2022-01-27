@@ -3,9 +3,11 @@ import React, { useState } from 'react'
 import { Scrollbars } from 'react-custom-scrollbars'
 import { useIntersectionObserver } from '../lib/useIntersectionObserver'
 import { ListGroup, ListGroupItem } from 'reactstrap'
+import LearnIndex from './LearnIndex'
+import GameIndex from './GameIndex'
 
+const Toc = ({ content, type, cate, currentTitle }) => {
 
-const Toc = ({ content }) => {
     // activeId는 화면 상단에 위치한 제목 element 다룰 state
     const [activeId, setActiveId] = useState('');
 
@@ -16,6 +18,10 @@ const Toc = ({ content }) => {
 
     // 게시물 본문을 줄바꿈 기준으로 나누고, 제목 요소인 것만 저장
     const titles = content.split(`\n`).filter((t) => t.includes('# '));
+
+    //해당 keywords에 해당하는 post, category는 bold체!!
+    var keywords = [cate, currentTitle]
+
 
     // 예외처리 - 제목은 문자열 시작부터 #을 써야함
     const result = titles
@@ -37,13 +43,22 @@ const Toc = ({ content }) => {
             };
         });
 
+
+    //** TOC */ 
     return (
         <div>
             <ListGroup>
                 <Scrollbars universal={true} autoHide autoHeight autoHeightMax="calc(100vh - 250px)">
                     <ListGroupItem>
-                        INDEX
+                        {type}
+                        {type == '배우기' ?
+                            (
+                                <LearnIndex keywords={keywords} />
+                            ) : (
+                                <GameIndex keywords={keywords} />
+                            )}
                     </ListGroupItem>
+                    <br></br>
                     {result.map((item, idx) => {
                         // count는 #개수에 따른 들여쓰기용 변수
                         if (item?.count && item.count <= 30 && item?.title) {

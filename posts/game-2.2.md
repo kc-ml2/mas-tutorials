@@ -2,6 +2,7 @@
 title: 2.2 Snake Leaderboard 참여 방법
 type: game
 order: 5
+cate: part2
 ---
 ## SNL 참여 방법 
 

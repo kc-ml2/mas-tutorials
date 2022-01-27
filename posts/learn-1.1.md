@@ -2,6 +2,7 @@
 title: 1.1 Quick review of Single-Agent RL
 type: learn
 order: 7
+cate: CH1
 ---
 
 ### 1.1. Quick review of Single-Agent RL

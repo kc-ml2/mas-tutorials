@@ -2,6 +2,7 @@
 title: 4.1 MADDPG
 type: learn
 order: 20
+cate: CH4
 ---
 
 ### 4.1. MADDPG

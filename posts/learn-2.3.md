@@ -2,6 +2,7 @@
 title: 2.3 Types of MARL Problems
 type: learn
 order: 13
+cate: CH2
 ---
 
 ## 2.3. Types of MARL problems

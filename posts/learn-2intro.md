@@ -2,6 +2,7 @@
 title: 2. Problems in MARL
 type: learn
 order: 10
+cate: CH2
 ---
 
 ### Preface

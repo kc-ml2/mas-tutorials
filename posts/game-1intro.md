@@ -2,6 +2,7 @@
 title: 1.  강화학습을 통한 Snake 학습시키기
 type: game
 order: 0
+cate: part1
 ---
 
 ### Preface

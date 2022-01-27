@@ -2,6 +2,7 @@
 title: 3.4 Randomizing environments
 type: learn
 order: 18
+cate: CH3
 ---
 
 ## 3.4. Randomizing environments

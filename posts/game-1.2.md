@@ -2,6 +2,7 @@
 title: 1.2 Single-Agent Algorithm in Multi-Snake
 type: game
 order: 2
+cate: part1
 ---
 
 ## 1.2.  Single-Agent Algorithm in Multi-Snake

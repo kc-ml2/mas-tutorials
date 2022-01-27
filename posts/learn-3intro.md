@@ -2,6 +2,7 @@
 title: 3. Emergent Behavior
 type: learn
 order: 14
+cate: CH3
 ---
 
 ### Preface

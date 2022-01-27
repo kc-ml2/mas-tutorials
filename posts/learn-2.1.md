@@ -2,6 +2,7 @@
 title: 2.1 Problem definition in MARL
 type: learn
 order: 11
+cate: CH2
 ---
 
 ## 2.1. Problem Definitions in MARL

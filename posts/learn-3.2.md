@@ -2,6 +2,7 @@
 title: 3.2 Sparse reward problem
 type: learn
 order: 16
+cate: CH3
 ---
 
 ## 3.2. Sparse Reward Problem

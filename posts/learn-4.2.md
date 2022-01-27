@@ -2,6 +2,7 @@
 title: 4.2 COMA
 type: learn
 order: 21
+cate: CH4
 ---
 
 ## 4.2. COMA

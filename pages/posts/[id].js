@@ -19,6 +19,9 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
             const prePosts = allPostsData[Object.keys(allPostsData).filter(order => allPostsData[order].order === pre)]
             const nextPosts = allPostsData[Object.keys(allPostsData).filter(order => allPostsData[order].order === next)]
 
+            var currentTitle = allPostsData[Object.keys(allPostsData).filter(id => allPostsData[id].id === postData.id)].title
+            console.log(currentTitle)
+
             if (prePosts !== undefined) {
                 var preTitle = allPostsData[Object.keys(allPostsData).filter(order => allPostsData[order].order === pre)].title
                 var preId = allPostsData[Object.keys(allPostsData).filter(order => allPostsData[order].order === pre)].id
@@ -31,13 +34,13 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
 
             return (
                 <Row >
-                    <Col md="2">
-                        <Toc content={postData.fileContents} />
+                    <Col md="3">
+                        <Toc content={postData.fileContents} type={"배우기"} cate={postData.cate} currentTitle={currentTitle} />
                     </Col>
-                    <Col md="10">
+                    <Col md="7">
                         <article>
                             <p>
-                                {postData.title}
+                                {postData.cate}
                             </p>
                             <div
                                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
@@ -67,6 +70,8 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
             const prePosts = allPostsData_game[Object.keys(allPostsData_game).filter(order => allPostsData_game[order].order === pre)]
             const nextPosts = allPostsData_game[Object.keys(allPostsData_game).filter(order => allPostsData_game[order].order === next)]
 
+            var currentTitle = allPostsData_game[Object.keys(allPostsData_game).filter(id => allPostsData_game[id].id === postData.id)].title
+
             if (prePosts !== undefined) {
                 var preTitle = allPostsData_game[Object.keys(allPostsData_game).filter(order => allPostsData_game[order].order === pre)].title
                 var preId = allPostsData_game[Object.keys(allPostsData_game).filter(order => allPostsData_game[order].order === pre)].id
@@ -79,10 +84,10 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
 
             return (
                 <Row>
-                    <Col md="2">
-                        <Toc content={postData.fileContents} />
+                    <Col md="3">
+                        <Toc content={postData.fileContents} type={"응용하기"} cate={postData.cate} currentTitle={currentTitle} />
                     </Col>
-                    <Col md="10">
+                    <Col md="7">
                         <article>
                             <p>
                                 {postData.title}

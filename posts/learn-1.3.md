@@ -2,6 +2,7 @@
 title: 1.3 Known Environments in MARL
 type: learn
 order: 9
+cate: CH1
 ---
 
 ## 1.3. Known Environments in MARL

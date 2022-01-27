@@ -2,6 +2,7 @@
 title: 2. 학습된 Snake로 Leaderboard 참여하기
 type: game
 order: 3
+cate: part2
 ---
 
 ### Preface

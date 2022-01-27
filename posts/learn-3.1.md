@@ -2,6 +2,7 @@
 title: 3.1  Complexity via Competition
 type: learn
 order: 15
+cate: CH3
 ---
 
 ## 3.1. Complexity via Competition

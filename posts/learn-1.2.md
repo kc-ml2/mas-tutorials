@@ -2,6 +2,7 @@
 title: 1.2 Multi-agent and Game Theory
 type: learn
 order: 8
+cate: CH1
 ---
 
 ## 1.2. Multi-agent and Game Theory

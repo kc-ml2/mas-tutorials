@@ -2,6 +2,7 @@
 title: 4. More MDRL Algorithm
 type: learn
 order: 19
+cate: CH4
 ---
 
 ### Preface

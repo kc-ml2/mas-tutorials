@@ -2,6 +2,7 @@
 title: 3.3 Opponent selection
 type: learn
 order: 17
+cate: CH3
 ---
 
 ## 3.3. Opponent Selection

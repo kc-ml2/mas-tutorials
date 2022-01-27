@@ -2,6 +2,7 @@
 title: 2.2 Information in MARL
 type: learn
 order: 12
+cate: CH2
 ---
 
 ## 2.2. Information in MARL

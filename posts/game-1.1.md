@@ -2,6 +2,7 @@
 title: 1.1 Previous Approaches
 type: game
 order: 1
+cate: part1
 ---
 
 ## 1.1.  Previous Approaches
