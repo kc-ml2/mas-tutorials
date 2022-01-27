@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "clsx": "^1.1.1",
+    "css-loader": "^6.5.1",
     "fs": "0.0.1-security",
     "gray-matter": "^4.0.3",
     "html": "^1.0.0",
@@ -27,7 +28,9 @@
     "remark-html": "^15.0.1",
     "remark-math": "^5.1.1",
     "remark-parse": "^10.0.1",
-    "remark-rehype": "^10.1.0"
+    "remark-rehype": "^10.1.0",
+    "sass": "^1.49.0",
+    "scss": "^0.2.4"
   },
   "devDependencies": {
     "eslint": "8.7.0",

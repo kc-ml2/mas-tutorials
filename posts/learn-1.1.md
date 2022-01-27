@@ -34,17 +34,15 @@ $$Q_{\pi}(s,a) = \mathbb{E}[\sum_{t}\gamma^tR(s_t,a_t,s_{t+1})|a_t\sim {\pi}(\cd
 
 $$V_{\pi}(s) = \mathbb{E}[\sum_{t}\gamma^tR(s_t,a_t,s_{t+1})|a_t\sim {\pi}(\cdot|s_t), s_0=s]$$
 
+![fifty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/SA.png)
+###### Figure 1. 일반적인 single-agent RL의 problem setting
 
-<center><figure>
-	<img src="/images/SA.png" width="400">
-	<figcaption>Figure 1. 일반적인 single-agent RL의 problem setting</figcaption>
-</figure></center>
+
 
 위에서 한번 정리한것처럼 강화학습의 기본 세팅은 Figure 1. 에서와 같이 하나의 agent와 환경사이의 상호작용으로부터 발생하는 reward를 최대화 하는데에 있습니다. 여기서 일반적으로는 reward가 가장 중요하기때문에 앞서 정리한것처럼 $Q(s)$ 혹은 $V(s)$와 이를 최대화하는 $\pi$를 학습시키는데에 초점이 맞추어져 있습니다. 하지만 본 튜토리얼에서는 multi-agent에 대한 이야기를 하고 있기 때문에 초점을 "agent와 환경사이의 상호작용"으로 옮기도록 하겠습니다. 
 
-<center><figure>
-	<img src="/images/MA.png" width="400">
-	<figcaption>Figure 2. Multi-agent에서의 problem setting</figcaption>
-</figure></center>
+![fifty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/MA.png)
+###### Figure 2. Multi-agent에서의 problem setting
+
 
 Multi-agent문제라고 하면 이름 그대로 Figure 1. 의 일반적인 강화학습에서처럼 하나의 agent가 아닌 Figure 2. 와 같이 다수의 agent가 환경과 상호작용하는 상태를 설명합니다. 즉 위의 MDP에서 사용된 $\mathcal{A}$를 agent하나의 action space가 아닌 모든 agent들의 action space의 product space ($\mathcal{A}=\prod_i \mathcal{A}_i$)로 변환하여 생각해 볼 수 있습니다. 하지만 여기서 추가적으로 고려해야 할 사항들이 생겨납니다. 원래 $\mathcal{A}$에 의존하던 다음 state에 대한 결정이 모든 agent들의 행동에 영향을 받는 것 뿐만 아니라 각 agent도 서로의 행동에 영향으로 받고 각 agent들이 서로의 행동에 의존하는 서로 다른 reward함수를 가질 수 있기 때문입니다. 즉 환경과 agent"들" 사이의 상호작용 뿐만 아니라 서로의 상호작용까지 고려하여 행동을 결정해야하는 복잡한 상황이 오게 됩니다. Multi-agent 문제의 예시들은 사실 일반적인 사회의 모습안에서 다양한 형태로 찾아볼 수 있습니다. 그리고 그것에 대해 수학적으로 정리한 대표적인 학문으로 *게임이론 (Game Theory)*이 있습니다.

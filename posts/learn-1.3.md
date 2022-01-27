@@ -37,15 +37,12 @@ of interactions between player strategies in terms of individual payoffs."
 
 이 분류는 게임의 진행 방식에 대한 분류입니다. 모든 agent가 동시에 자신의 action을 결정하고 움직이거나 각각 따로 결정하되 서로의 결정을 모른채 동시에 action을 적용하게 되는 경우를 동시진행, simultaneous라고 합니다. 반대로 각각 순차적으로 action을 결정하고 그것을 현재 상황에 적용을 하게 되는 경우를 순차적진행, sequential 이라 부릅니다. 흔히 이 두가지 방식에 따라 게임을 나타내는 방식도 달라지는데 simultaneous의 경우 흔히 normal
 
-<center><figure>
-	<img src="/images/NG.png" width="300">
-	<figcaption>Figure 5. Normal form game의 예시. Image source: <a href="https://en.wikipedia.org/wiki/Extensive-form_game">https://en.wikipedia.org/wiki/Extensive-form_game</a></figcaption>
-</figure></center>
+![fifty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/NG.png)
+###### Figure 5. Normal form game의 예시. Image source: <a href="https://en.wikipedia.org/wiki/Extensive-form_game">https://en.wikipedia.org/wiki/Extensive-form_game</a>
 
-<center><figure>
-	<img src="/images/EG.png" width="300">
-	<figcaption>Figure 6. Extensive game의 예시. Image source: <a href="https://en.wikipedia.org/wiki/Extensive-form_game">https://en.wikipedia.org/wiki/Extensive-form_game</a></figcaption>
-</figure></center>
+
+![forty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/EG.png)
+###### Figure 6. Extensive game의 예시. Image source: <a href="https://en.wikipedia.org/wiki/Extensive-form_game">https://en.wikipedia.org/wiki/Extensive-form_game</a>
 
 
 ### Cooperative / Noncooperative
@@ -73,11 +70,11 @@ FYI: Symmetric Game은 Symmetric equilibrium과의 혼동에 주의해야합니�
 
 최근 또 강화학습에서 주목을 받았던 **스타크래프트 (StarCraftII)** 나 **도타 (Dota2)**의 경우 플레이어간에 볼 수 있는 게임의 상태가 한정적이라는 것과 동시에 지속적으로 행동을 하면서 진행하기때문에 simultaneous 하고 **imperfect information**인 게임으로 볼 수 있습니다. 사실 simultaneous한 진행을 하는 순간 플레이어는 자신의 행동을 선택할때 상대가 어떤 행동을 할지 모르는 상황에서 결정을 하기때문에 이미 imperfect information 게임이 됩니다.
 
-![https://lh3.googleusercontent.com/ckm-3GlBQJ4zbNzfiW97yPqj5PVC0qIbRg42FL35EbDkhWoCNxyNZMMJN-f6VZmLMRbyBk2PArLQ-jDxlHbsE3_YaDUmcxUvMf8M=w2048-rw-v1](https://lh3.googleusercontent.com/ckm-3GlBQJ4zbNzfiW97yPqj5PVC0qIbRg42FL35EbDkhWoCNxyNZMMJN-f6VZmLMRbyBk2PArLQ-jDxlHbsE3_YaDUmcxUvMf8M=w2048-rw-v1)
+![full](https://lh3.googleusercontent.com/ckm-3GlBQJ4zbNzfiW97yPqj5PVC0qIbRg42FL35EbDkhWoCNxyNZMMJN-f6VZmLMRbyBk2PArLQ-jDxlHbsE3_YaDUmcxUvMf8M=w2048-rw-v1)
 
 Image from Deepmind blog:[https://deepmind.com/blog/article/alphastar-mastering-real-time-strategy-game-starcraft-ii](https://deepmind.com/blog/article/alphastar-mastering-real-time-strategy-game-starcraft-ii)
 
-![https://openai.com/content/images/2019/04/Dota-Matrix.png](https://openai.com/content/images/2019/04/Dota-Matrix.png)
+![full](https://openai.com/content/images/2019/04/Dota-Matrix.png)
 
 Image from OpenAI blog: [https://openai.com/content/images/2019/04/Dota-Matrix.png](https://openai.com/content/images/2019/04/Dota-Matrix.png)
 

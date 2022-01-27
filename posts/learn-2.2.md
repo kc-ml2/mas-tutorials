@@ -13,18 +13,10 @@ cate: CH2
 
 통상 같은 의미로 쓰이기도 하는 상태(state)와 관측(observation)은 엄밀하게 따지면 observation은 관측면에서의, state는 정보면에서의 특성을 띄고 있습니다. 간단히 풀어 쓰면 observation은 관측할 수 있는 것 자체를 의미하며 state는 (일반적으로는) Markov property를 가지기 위한 충분한 정보를 포함하고 있는 상태표현을 의미합니다. 상태라는것을 여러 정보들의 집합이라고 생각하면 흔하게 강화학습의 예시로 등장하는 toy task들의 경우 일반적으로 observation $\subseteq$ state의 관계로 생각할 수 있습니다. 
 
-<center><figure>
-<video width="200" controls>
-	<source src="https://gym.openai.com/videos/2019-10-21--mqt8Qj1mwo/CartPole-v1/thumbnail.mp4" type="video/mp4">
-</video>
-<video width="150" controls>
-	<source src="https://gym.openai.com/videos/2019-10-21--mqt8Qj1mwo/Ant-v2/thumbnail.mp4" type="video/mp4">
-</video>
-<video width="120" controls>
-	<source src="https://gym.openai.com/videos/2019-10-21--mqt8Qj1mwo/Breakout-v0/thumbnail.mp4" type="video/mp4">
-</video>
-<figcaption>Figure 4. Videos from OpenAI gym: <a href="https://gym.openai.com/envs/#classic_control">https://gym.openai.com/envs/#classic_control</a></figcaption>
-</figure></center>
+[![inline](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/ex1.png)](https://gym.openai.com/videos/2019-10-21--mqt8Qj1mwo/CartPole-v1/thumbnail.mp4) [![inline](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/ex2.png)](https://gym.openai.com/videos/2019-10-21--mqt8Qj1mwo/Ant-v2/thumbnail.mp4) [![inline](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/ex3.png)](https://gym.openai.com/videos/2019-10-21--mqt8Qj1mwo/Breakout-v0/thumbnail.mp4)
+
+###### Figure 4. Videos from OpenAI gym: <a href="https://gym.openai.com/envs/#classic_control">https://gym.openai.com/envs/#classic_control</a>
+
 
 
 예를들어 강화학습의 대표 toy task인 openai gym의 cartpole같은 경우 {cart position, cart velocity, pole angle, pole velocity at tip} [[https://github.com/openai/gym/wiki/CartPole-v0](https://github.com/openai/gym/wiki/CartPole-v0)] 이렇게 4가지의 scalar 값이 observation으로 주어집니다. 그리고 강화학습을 통해 cartpole을 학습시키는 예제를 보면 이 observation을 state와 동일하게 생각하여 network의 input으로 받아 학습시키는 것을 볼 수 있습니다. 다르게 해석하면 observation으로 주어지는 4개의 값들만으로도 충분하게 Markov property를 가진다고 볼 수 있기 때문에 state도 동일하게 사용할 수 있다 라고 해석할 수 있습니다. 반대인 경우로는 강화학습 논문에서 흔하게 쓰이는 Atari를 생각해볼 수 있습니다. Atari 의 경우 observation으로 주어지는 것은 현재 게임의 frame을 나타내는 image 한장입니다. 여기서 발생하는 문제는 하나의 frame만으로는 action을 정할 정보가 부족하다는 것입니다. 대표적인 missing info로는 motion에 대한 정보가 있습니다. Breakout을 예시로 들자면 벽돌과 paddle 사이에 공이 위치해 있는 frame을 observation으로 받았다고 가정했을때 현재 공이 어느방향으로 움직이는지 알 수 없기 때문에 당장 paddle을 움직일지, 어느방향으로 움직일지 결정을 할 수 없는 상황이 발생합니다. 이를 해결하기 위해서 다양한 강화학습 논문을 보면 frame stack이라는 개념을 도입해 4개의 연속적인 frame들을 쌓아서 motion에 대한 정보를 담도록 하였습니다. 이렇게 Atari 의 경우 (almost) Markov한 상태를 만들기 위해 observation은 하나의 frame, state는 4개의 frame으로 구성됩니다. 
@@ -45,9 +37,5 @@ POMDP를 구성하는 튜플의 7가지 원소 중 $(\mathcal{X}, \mathcal{A}, R
 
 위에서 언급되었던 Markov모델들과 이들의 관계를 그림으로 표현하면 다음과 같습니다. 
 
-<center><figure>
-	<img src="/images/MD_diagram_tuple.png" width="650">
-	<figcaption>Figure 5. Markov proccesses diagram</figcaption>
-</figure></center>
-
-Figure 5. Markov Models
+![eighty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/MD_diagram_tuple.png)
+###### Figure 5. Markov proccesses diagram

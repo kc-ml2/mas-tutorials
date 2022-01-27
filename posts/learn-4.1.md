@@ -21,10 +21,9 @@ $$\begin{aligned} P(s'|s,a_1,...,a_N) &= P(s'|s,a_1,...,a_N, \pi_1, ...,\pi_N) \
 
 실제 경기를 뛰는 N명의 선수(actor)와 이들을 **1대1**로 훈련시키는 N명의 코치(critic)들을 상상해 봅시다. 선수들은 자신이 보고 듣는 영역의 정보만 알 수 있지만 코치들은 경기장 전체를 내려다보며 다른 선수들을 관찰할 수 있습니다. 또한, 코치들은 다른 코치들과 선수의 전략에 대한 정보를 공유하며 자신의 선수를 훈련시킵니다. 코치들간의 공유되는 정보를 이용해 자신의 선수들에게 적절한 피드백을 줄 수 있으며 자신이 생각하는 훈련방식을 개별 선수에 맞게 적용 가능하기 때문에 각 선수들이 경기에 나갔을 때 자신의 포지션에 맞는 역할을 잘 수행하도록 이끌 수 있습니다.
 
-<center><figure>
-	<img src="/images/5_0.png" width="400">
-	<figcaption>Fig 1. Overview of MA-AC approach. (Image source: Lowe, et al., 2017)</figcaption>
-</figure></center>
+![sixty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/5_0.png)
+###### Fig 1. Overview of MA-AC approach. (Image source: Lowe, et al., 2017)
+
 
 그러면 multi-agent policy gradient의 수식을 통해 MADDPG의 아이디어를 조금 더 깊이 들여다 보겠습니다.
 
@@ -60,7 +59,5 @@ $$y = r_i + \gamma Q_i^{\boldsymbol{\mu'}}(\mathbf{x'},a_1', ...,a_N')|_{a_j'=\b
 
 Mulit-Agent Actor Critic Framework는 model에 대한 가정과 communication 방식의 제한 없이 localized agent와 centralized critic만을 이용해 다양한 multi-agent task에서 agent간의 경쟁적, 협동적, 혼합적 행동을 학습시키는데 성공했습니다. 단순히 agent간의 물리적 action으로 인한 상호작용 이외에도 agent간의 signaling을 통한 역할 수행도 가능함을 보여주었습니다. Multi-Agent Snake Game에서 이와 같은 communication을 다룰 기회는 없지만 agent간의 복잡한 competitive strategy를 이끌어내기에 적합한 알고리즘입니다. 원 논문에서는 초기에 설명한 가정을 완화하기 위해 타 agent의 action을 추정하는 방식이나 ensemble policy를 통해 stability를 보완하는 테크닉들을 보여주기도 했습니다. 
 
-<center><figure>
-	<img src="/images/5_1.png" width="600">
-	<figcaption>Fig 2. MADDPG Algorithm. (Image source: Lowe, et al., 2017) </figcaption>
-</figure></center>
+![eighty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/5_1.png)
+###### Fig 2. MADDPG Algorithm. (Image source: Lowe, et al., 2017)

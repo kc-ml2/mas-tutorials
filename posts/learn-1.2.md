@@ -7,10 +7,9 @@ cate: CH1
 
 ## 1.2. Multi-agent and Game Theory
 
-<center><figure>
-	<img src="/images/GT.png" width="400">
-	<figcaption>Figure 3. Concept drawing of Game Theory (Rock-Paper-Scissors)</figcaption>
-</figure></center>
+![fifty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/GT.png)
+###### Figure 3. Concept drawing of Game Theory (Rock-Paper-Scissors)
+
 
  **Game Theory**    Multi-agent 문제에 대해 이야기 하기 위해서는 우선 Game Theory (게임이론)에서 다루는 개념들에 익숙해지는것이 좋습니다. 하지만 기본적인 개념들의 범위만 해도 매우 광범위하기 때문에 앞으로 이어나갈 이야기들과 밀접한 관계를 가지고 있는 주제들과 MDRL관련 논문을 읽을때 자주 등장하는 용어들 위주로 소개하겠습니다.
 
@@ -26,10 +25,10 @@ cate: CH1
 
 여러 객체들간의 상호작용을 수학적으로 설명하고자하는 게임이론 개념의 시초는 1928년 발표된 John von Neumann (폰 노이만)의 *On the Theory of Games of Strategy, 1928* 입니다. 이후 Oskar Morgenstern (모겐스턴)과 함께 출간한 *Theory of Games and Economic Behavior, 1944* 에서는 zero-sum game (제로섬 게임)의 균형이 항상 존재한다는 것을 보였고 마지막으로 1950년과 1951년 발표된 John Forbes Nash Jr. (존 내쉬)의 *Equilibrium points in n-person games (1950)* 과 *Non-cooperative Games (1951)* 에서 제로섬이 아닌 더 광범위한 게임에서도 Nash Equilibrium (내쉬균형)이 존재한다는 것을 보이며 그 틀이 완성되었습니다. 
 
-<center><figure>
-	<img src="/images/NE.png" width="400">
-	<figcaption>Figure 4. Nash equilibrium in Rock-Paper-Scissors</figcaption>
-</figure></center>
+![fifty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/NE.png)
+###### Figure 4. Nash equilibrium in Rock-Paper-Scissors
+
+
 
 **Nash Equilibrium (NE)**    위와같이 게임이론의 발달과정에서 "Equilibrium (균형)"이라는 개념이 지속적으로 등장합니다. 이중 가장 대표적인 내쉬균형의 정의를 Holt (2004)는 다음과 같이 이야기하였습니다:
 

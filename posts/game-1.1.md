@@ -39,15 +39,12 @@ cate: part1
 
 앞서 이야기한 다양한 heuristic 한 방법으로 만들어낸 vectorized input은 가장 명확한 정보를 가지고 있지만 반대로 전체 게임에 대한 상태에 대해서는 아주 소량의 정제된 정보만 가지게 되는 경우가 대부분입니다. 반대로 현재 관측할 수 있는 게임화면 전체를 RGB이미지로서 받는 경우에 뱀과 벽, 그리고 사과등을 구분하는 원초적인 문제부터 해결해야하기 때문에 모델이 학습하는 과정이 매우 어려워질 수있습니다. 그래서 이에대한 적절한 해결법으로 위의 블로그에서는 각 grid cell에 어떤 entity가 들어있는지를 onehot vector를 이용하는 방법을 사용하였습니다. Onehot vector를 사용할 경우 아래 그림과 같이 input matrix의 특정 채널이 한가지 종류의 entity의 위치를 나타내는 binary matrix 로도 해석이 될 수 있습니다.
 
-<center><figure>
-	<img src="/images/onehot.png" width="600">
-	<figcaption>Figure 1. Onehot encoding of entities per pixel</figcaption>
-</figure></center>
+![ninety](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/onehot.png)
+###### Figure 1. Onehot encoding of entities per pixel
 
-<center><figure>
-	<img src="/images/channel.png" width="600">
-	<figcaption>Figure 2. Channel-wise entities</figcaption>
-</figure></center>
+![ninety](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/channel.png)
+###### Figure 2. Channel-wise entities
+
 
 Onehot의 가장 큰 장점은 RGB와는 달리 비슷한 색 이라는 개념이 없기때문에 모든 entity를 orthogonal하게 만들 수 있습니다. 따라서 CNN등을 이용하여 학습시킬때 네트워크가 학습해야하는 정보가 줄어들어 문제를 더 쉽게 만든다는 점입니다. 또한 deep learning 을 사용하지 않고 접근하고자 하는 사용자의 입장에서도 정보를 처리하기가 훨씬 쉽다라는 장점이 있습니다. 그러면 원하는 entity 사이의 거리를 계산하여 다시 vectorized input으로 돌아가는것도 훨씬 쉬워집니다.
 
@@ -57,15 +54,12 @@ Onehot의 가장 큰 장점은 RGB와는 달리 비슷한 색 이라는 개념�
 
 Snake 게임을 강화학습을 이용해서 학습을 시킨 사례들을 찾아보면 상당수 DQN을 베이스로 하는 모델을 사용하는 것을 볼 수 있습니다. (ER을 이용한 효율성 증가, discrete action을 다루기 적합함, 그리고 유명함.) 그리고 보다 쉬운 generalization을 위해 observation 을 살짝 바꾸어 일반적으로 사람이 보는것과 같이 맵 전체를 보는것이 아닌 뱀의 머리를 기준으로 특정 영역을 잘라 항상 observation의 중심에는 뱀의 머리가 위치하도록 하였습니다. 이렇게 학습을 시킬경우 더 작은 맵에서 학습시킨 모델을 더 큰 맵이나 아예 다른 맵으로 옮기기에도 용이하고 또한 한번에 봐야하는 정보량이 다르다는 것과 외적으로 등장할 수 있는 벽이나 사과등이 뱀의 머리에 상대적인 위치에 표시됨으로서 맵상에서 현재 플레이어의 절대적인 위치에 구애받지 않게 됩니다. 즉 게임을 훨씬 더 쉽게 만들었다는 이야기가 됩니다. 하지만 반대로 단점도 있습니다. 맵 전체가 주어짐에도 불과하고 뱀의 머리를 중심으로 오려서 사용할 경우 일부 보이지않는 구간이 생길 수 있으며 이는 문제자체를 Partially Observable Markov Decision Process (POMDP)로 만들어버릴 수 있다는 것입니다. 이렇게 될 경우 우리가 학습시키고자 하는 agent는 굉장히 reactive 한 agent가 될 가능성이 있으며 이는 미래에 MARL세팅을 고려했을때 전략을 짜기가 힘들어질 수 있다는 이야기가 됩니다. POMDP에 대해 더 자세한 내용은 [여기](https://tutorials.kc-ml2.com/v2/2/2intro)를 참고해 주세요.
 
-<center><figure>
-	<img src="/images/4_1.png" width="300">
-	<figcaption>Figure 3. Full observation</figcaption>
-</figure></center>
 
-<center><figure>
-	<img src="/images/4_2.png" width="300">
-	<figcaption>Figure 4. Partial observation with centered around head with vision range of 5</figcaption>
-</figure></center>
+![forty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/4_1.png)
+###### Figure 3. Full observation
+
+![forty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/4_2.png)
+###### Figure 4. Partial observation with centered around head with vision range of 5
 
 ### 1.1.4. Playing with the Rewards
 
@@ -82,14 +76,14 @@ Snake 게임을 강화학습을 이용해서 학습을 시킨 사례들을 찾�
 
 이렇듯 리워드의 상대적인 값에 따라서 같은 강화학습 알고리즘을 사용하더라도 사람이 생각하는 최적의 솔루션과는 사뭇 다른 결과를 얻을 수 있다는 것을 보았습니다. 비슷하게 단순히 사과를 먹는데서 점수를 얻는것과 더불어 시간에 대한 reward를 줄 경우 다음과 같은 행동도 관측 할 수 있습니다. 이것을 ML2의 Marlenv의 'Snake-v1'를 통해 구현해 보았습니다.
 
-![4_3.gif](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/4_3.gif)
-<i>Figure 5. Reward 1.0 only when fruit eatten</i>
+![forty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/4_3.gif)
+###### Figure 5. Reward 1.0 only when fruit eatten
 
-![4_4.gif](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/4_4.gif)
-<i>Figure 6. Reward = {fruit:1.0, time: 0.01}</i>
+![forty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/4_4.gif)
+###### Figure 6. Reward = {fruit:1.0, time: 0.01}
 
-![4_5.gif](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/4_5.gif)
-<i>Figure 7. Reward = {fruit: 1.0, time: 0.1}</i>
+![forty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/4_5.gif)
+###### Figure 7. Reward = {fruit: 1.0, time: 0.1}
 
 
 오직 사과를 먹는데에만 보상을 부여했을 경우 거의 최단거리에 가까운 길로 사과를 먹는데 집중을 하게 됩니다. 반대로 시간에 대한 보상을 아주 조금 부여할 경우 초반에 조금더 빨리 생존하는 법을 배우며 학습이 완료된 시점에서는 사과를 먹는데 집중을 하지만 중간중간 조금 더 다양한 움직임을 보여줍니다. 더 나아가 생존시간에 대한 보상을 더 키워주면 마지막 그림과 같이 사과도 먹을 수 있지만 그저 조금더 생존에 집중된 단순한 패턴의 움직임으로 수렴하는 것을 볼 수 있습니다.

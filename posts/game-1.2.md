@@ -13,20 +13,15 @@ cate: part1
 2. 동일한 알고리즘이지만 독립적으로 학습되는 agent들의 동시다발적 학습.
 3. 동일한 알고리즘, 동일한 모델을 가진 하나의 agent의 복사본을 통한 학습.
 
-<center><figure>
-	<img src="/images/4_6.gif" width="300">
-	<figcaption>Figure 6. Single-agent로 학습된 model을 불러온 경우</figcaption>
-</figure></center>
+![forty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/4_6.gif)
+###### Figure 6. Single-agent로 학습된 model을 불러온 경우
 
-<center><figure>
-	<img src="/images/4_7.gif" width="300">
-	<figcaption>Figure 7. Multi-agent 환경에서 독립적인 모델로 학습된 agent들</figcaption>
-</figure></center>
+![forty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/4_7.gif)
+###### Figure 7. Multi-agent 환경에서 독립적인 모델로 학습된 agent들
 
-<center><figure>
-	<img src="/images/4_8.gif" width="300">
-	<figcaption>Figure 8. Multi-agent 환경에서 공유되는 모델로 학습된 agent들</figcaption>
-</figure></center>
+![forty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/4_8.gif)
+###### Figure 8. Multi-agent 환경에서 공유되는 모델로 학습된 agent들
+
 
 위의 그림을 보면 Single-agent 로 학습된 agent들을 multi-agent환경으로 옮겼을 경우 서로 충돌이라는 개념을 사전에 학습한 적이 없기 때문에 같은 fruit을 향해 가거나 할때 거리낌없이 충돌하여 뱀들이 죽는것을 쉽게 볼 수 있습니다. 하지만 최후에 남은 뱀은 그래도 나름 괜찮은 성능을 보이는 것 또한 알 수 있습니다. 
 

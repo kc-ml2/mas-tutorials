@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import { getAllPostIds, getPostData, getLearnPostsData, getGamePostsData } from '../../lib/posts'
-import Router from 'next/router'
-import Image from 'next/image'
+import styles from '../../styles/Posts.module.scss'
 import Toc from '../../components/TOC'
 import { Row, Col } from 'reactstrap'
 
@@ -38,7 +37,7 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
                         <Toc content={postData.fileContents} type={"배우기"} cate={postData.cate} currentTitle={currentTitle} />
                     </Col>
                     <Col md="7">
-                        <article>
+                        <article className={styles.post}>
                             <p>
                                 {postData.cate}
                             </p>
@@ -88,7 +87,7 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
                         <Toc content={postData.fileContents} type={"응용하기"} cate={postData.cate} currentTitle={currentTitle} />
                     </Col>
                     <Col md="7">
-                        <article>
+                        <article className={styles.post}>
                             <p>
                                 {postData.title}
                             </p>

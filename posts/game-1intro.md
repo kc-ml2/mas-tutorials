@@ -7,9 +7,8 @@ cate: part1
 
 ### Preface
 
-<center><figure>
-	<img src="/images/4_0.gif" width="400">
-</figure></center>
+![forty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/4_0.gif)
+
 
 본 튜토리얼의 목적은 아주 고전적인 게임이면서 지금도 종종 접할 수 있는 게임인 snake 게임을 multi-player 로 확장하여 RL과 MARL의 관점에서 분석해보고 학습된 모델을 Snake-leaderboard에 업로드하는 방법에 대한 가이드라인을 제공하는 것입니다.
 

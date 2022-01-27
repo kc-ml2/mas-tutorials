@@ -29,10 +29,8 @@ Stochastic game $G$ is defined with $(\mathcal{X}, \mathcal{A}, P, R, Z, O, n, \
 
 이렇게 문제 자체를 정의하는 과정에서 1차적으로 해결해야할 사항이 발생합니다. Competitive 하거나 fully decentralized system과는 다르게 reward 함수 $r(s, \boldsymbol{u}) : S \times U \rightarrow \mathbb{R}$ 가 joint action 에 대해 정의된다는 점입니다. 덤으로 partial observability 에 의해 각 agent의 observation이 서로 다른경우 이를 하나의 state $s$ 로 묶는것 또한 고민해봐야할 점입니다. 결국 RL에서 흔히 이야기하는 $Q$ 나 $V$ 가 모든 agent의 정보를 알고있어야한다는 점입니다. 고로 각 함수는 다음과 같이 표기합니다: $Q^{\boldsymbol{\pi}}(s_t, \boldsymbol{u}_t), V^{\boldsymbol{\pi}}(s_t)$. 이에대해 COMA는 다음과 같은 architecture 를 제시하였습니다. 
 
-<center><figure>
-	<img src="/images/5_2.png" width="650">
-	<figcaption>Figure 3. Architecture details of COMA (Image source: Foerster et al. 2018) </figcaption>
-</figure></center>
+![eighty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/5_2.png)
+###### Figure 3. Architecture details of COMA (Image source: Foerster et al. 2018)
 
 Figure 3 (b)에서와 같이 각각의 agent는 자신의 observation 과 action의 history를 GRU를 통해 $h_t^a$로 encoding 함으로써 trajectory $\tau$에 대한 정보를 얻습니다. 그리고 조금은 COMA의 단점일 수도 있지만 centralized critic이 각 agent와는 다르게 global state정보를 $s_t$를 통해 따로 받게 됩니다. (애초에 global한 정보가 주어지지 않는 경우에 대한 해결책은 따로 제시하고 있지 않습니다.) 추가적으로 각 agent의 action과 policy정보를 받음으로써 critic은 사실상 모든 정보를 알고있는 존재가 됩니다. 그렇다면 마르코프 성질또한 가정하는데 큰 무리가 없습니다.
 
