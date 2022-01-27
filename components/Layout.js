@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-page-custom-font */
 /* eslint-disable @next/next/no-sync-scripts */
 import Head from 'next/head'
-// import NavBar from './NavBar'
-// import Footer from './Footer'
+import NavBar from './NavBar'
+import Footer from './Footer'
 
 export default function Layout({ children }) {
 
@@ -22,9 +22,9 @@ export default function Layout({ children }) {
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
             </Head>
-            {/* <NavBar /> */}
+            <NavBar />
             <main>{children}</main>
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }
