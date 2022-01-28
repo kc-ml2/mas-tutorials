@@ -1,65 +1,94 @@
+@import './variable';
+
 .post {
 
+    color: $basic;
+    line-height: 32px;
+    word-spacing: 0.8px;
+    font-weight: 300;
 
-h6 {
-    text-align: center;
-}
+    a {
+        color: $purple;
+        font-weight: 600;
+    }
 
-img[alt=inline] {
-    display: inline-block;
-    height: 20%;
-    width: 20%;
-    margin: 0 auto;
-    padding-top: 1rem;
-    margin-left: 10%;
-}
+    STRONG {
+        font-weight: 600;
+        color: $dark;
+    }
 
-img[alt=forty] {
-    height: 40%;
-    width: 40%;
-    display: block;
-    margin: 0 auto;
-    padding-top: 1rem;
-}
+    h2 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 
-img[alt=fifty] {
-    height: 50%;
-    width: 50%;
-    display: block;
-    margin: 0 auto;
-    padding-top: 1rem;
-}
+    h3 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 
-img[alt=sixty] {
-    height: 60%;
-    width: 60%;
-    display: block;
-    margin: 0 auto;
-    padding-top: 1rem;
-}
+    h6 {
+        text-align: center;
+        font-weight: 300;
+        font-size: 0.9rem;
+        padding-bottom: 1rem;
+    }
 
-img[alt=eighty] {
-    height: 80%;
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-    padding-top: 1rem;
-}
+    img[alt=inline] {
+        display: inline-block;
+        height: 20%;
+        width: 20%;
+        margin: 0 auto;
+        padding-top: 1rem;
+        margin-left: 10%;
+    }
 
-img[alt=ninety] {
-    height: 90%;
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-    padding-top: 1rem;
-}
+    img[alt=forty] {
+        height: 40%;
+        width: 40%;
+        display: block;
+        margin: 0 auto;
+        padding-top: 1rem;
+    }
 
-img[alt=full] {
-    height: 100%;
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    padding-top: 1rem;
+    img[alt=fifty] {
+        height: 50%;
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        padding-top: 1rem;
+    }
 
-}
+    img[alt=sixty] {
+        height: 60%;
+        width: 60%;
+        display: block;
+        margin: 0 auto;
+        padding-top: 1rem;
+    }
+
+    img[alt=eighty] {
+        height: 80%;
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        padding-top: 1rem;
+    }
+
+    img[alt=ninety] {
+        height: 90%;
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+        padding-top: 1rem;
+    }
+
+    img[alt=full] {
+        height: 100%;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        padding-top: 1rem;
+
+    }
 }

@@ -7,7 +7,7 @@ cate: CH2
 
 ## 2.1. Problem Definitions in MARL
 
-강화학습 관련 논문들을 보다 보면 **MDP (Markov Decision Process)**를 통해 문제를 정의하는것으로 시작하는것을 흔히 볼 수 있습니다. 여기서 가장 중요한 단어는 Markov입니다. MDP에 Markov가 들어가는 이유는 MDP라는 과정 자체가 Markov property에 기반을 두고 있기 때문인데 Markov property는 간단하게 이야기해 상태 A 에서 상태 B 로 넘어가는 상황에서 B로 넘어가는 과정을 설명하는데 필요한 모든 정보는 상태 A에만 의존하고 그 이전 상태를 포함한 모든 다른 상태에는 의존하지 않는다 정도로 정의해 볼 수 있습니다. 그리고 이러한 상태변환을 통한 과정을 표현할때 Markov Process (MP) 라는 이름을 사용하고 $(\mathcal{X}, P)$ 이렇게 두개의 tuple 로 표현합니다. (각 변수의 대한 설명은 뒤에 MDP를 통해 자세하게 하겠습니다.)
+강화학습 관련 논문들을 보다 보면 __MDP(Markov Decision Process)__ 를 통해 문제를 정의하는것으로 시작하는것을 흔히 볼 수 있습니다. 여기서 가장 중요한 단어는 Markov입니다. MDP에 Markov가 들어가는 이유는 MDP라는 과정 자체가 Markov property에 기반을 두고 있기 때문인데 Markov property는 간단하게 이야기해 상태 A 에서 상태 B 로 넘어가는 상황에서 B로 넘어가는 과정을 설명하는데 필요한 모든 정보는 상태 A에만 의존하고 그 이전 상태를 포함한 모든 다른 상태에는 의존하지 않는다 정도로 정의해 볼 수 있습니다. 그리고 이러한 상태변환을 통한 과정을 표현할때 Markov Process (MP) 라는 이름을 사용하고 $(\mathcal{X}, P)$ 이렇게 두개의 tuple 로 표현합니다. (각 변수의 대한 설명은 뒤에 MDP를 통해 자세하게 하겠습니다.)
 
 ![fifty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/MP.png)
 ###### Figure 1. Markov Process. Image from David Silver: <a href="https://www.davidsilver.uk/wp-content/uploads/2020/03/MDP.pdf">https://www.davidsilver.uk/wp-content/uploads/2020/03/MDP.pdf</a>
