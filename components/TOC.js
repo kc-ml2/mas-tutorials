@@ -5,6 +5,7 @@ import { useIntersectionObserver } from '../lib/useIntersectionObserver'
 import { ListGroup, ListGroupItem } from 'reactstrap'
 import LearnIndex from './LearnIndex'
 import GameIndex from './GameIndex'
+import styles from '../styles/TOC.module.scss'
 
 const Toc = ({ content, type, cate, currentTitle }) => {
 
@@ -47,10 +48,9 @@ const Toc = ({ content, type, cate, currentTitle }) => {
     //** TOC */ 
     return (
         <div>
-            <ListGroup>
-                <Scrollbars universal={true} autoHide autoHeight autoHeightMax="calc(100vh - 250px)">
-                    <ListGroupItem>
-                        {type}
+            <ListGroup className={styles.all}>
+                <Scrollbars universal={true} autoHide autoHeight autoHeightMax="calc(100vh)">
+                    <ListGroupItem className={styles.index}>
                         {type == '배우기' ?
                             (
                                 <LearnIndex keywords={keywords} />
@@ -58,16 +58,17 @@ const Toc = ({ content, type, cate, currentTitle }) => {
                                 <GameIndex keywords={keywords} />
                             )}
                     </ListGroupItem>
-                    <br></br>
+
                     {result.map((item, idx) => {
                         // count는 #개수에 따른 들여쓰기용 변수
                         if (item?.count && item.count <= 30 && item?.title) {
                             return (
                                 <ListGroupItem
+                                    id={styles.notActive}
                                     key={item.title + idx}
                                     style={{ marginLeft: `${item.count}px`, }}
                                     className={clsx(
-                                        activeId === item.anchor
+                                        activeId === item.anchor && styles.current
                                     )}>
                                     <a
                                         href={`#${item.anchor}`}

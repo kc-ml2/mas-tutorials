@@ -7,6 +7,7 @@ const LearnIndex = ({ keywords }) => {
     return (
         <div>
             <ul>
+                {/* <p>| 배우기 |</p> */}
                 <li>
                     <details>
                         <summary dangerouslySetInnerHTML={{ __html: makeBold('CH1', keywords) }} ></summary>

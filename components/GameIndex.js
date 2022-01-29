@@ -7,6 +7,7 @@ const GameIndex = ({ keywords }) => {
     return (
         <div>
             <ul>
+                {/* <p>| 응용하기 |</p> */}
                 <li>
                     <details>
                         <summary dangerouslySetInnerHTML={{ __html: makeBold('part1', keywords) }} ></summary>

@@ -1,0 +1,38 @@
+@import './variable';
+
+$btn-padding-y:               7px !default;
+$btn-padding-x:               22px !default;
+$btn-line-height:             1.35em !default;
+
+$btn-padding-y-sm:            4.5px !default;
+$btn-padding-x-sm:            14.5px !default;
+$btn-line-height-sm:          1.35  !default;
+
+$btn-padding-y-lg:            12px !default;
+$btn-padding-x-lg:            30px !default;
+
+$btn-round-radius:            30px !default;
+$btn-round-radius-sm:            8px !default;
+
+
+.ML2{
+    border: 1px solid $basic;
+    border-radius:  $btn-round-radius-sm;
+    color: $basic;
+    padding-top: $btn-padding-y-sm;
+    padding-bottom: $btn-padding-y-sm;
+    padding-right: $btn-padding-x-sm;
+    padding-left: $btn-padding-x-sm;
+    background-color: transparent;
+    font-size: 0.8rem;
+}
+
+.ML2:hover {
+    border: 1px solid $purple;
+    color: $purple;
+}
+
+.ML2:active {
+    border: 1px solid $purple;
+    outline:0;
+}

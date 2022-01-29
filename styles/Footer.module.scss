@@ -1,0 +1,48 @@
+@import './variable';
+
+.footer {
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background-color: black;
+    color: white;
+    min-height: 15vh;
+    max-width: 4500px;
+    margin: 0 auto;
+}
+
+.copyright {
+  font-size : 0.8rem;
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  img{
+    display: flex;
+  }
+
+  .iconItem {
+    min-width: 24px;
+    min-height: 24px;
+    margin-right: 1.5rem;
+  }
+}
+
+.toggle {
+  margin: -10px;
+}
+
+
+  @media (max-width: 800px) {
+    .copyright {
+      padding-top: 1rem;
+      text-align: start;
+    }
+    
+    .icon {
+      padding-top: 1rem;
+    }
+
+}

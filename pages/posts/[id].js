@@ -2,7 +2,9 @@
 import { getAllPostIds, getPostData, getLearnPostsData, getGamePostsData } from '../../lib/posts'
 import styles from '../../styles/Posts.module.scss'
 import Toc from '../../components/TOC'
+import ML2 from '../../components/ML2'
 import { Row, Col } from 'reactstrap'
+
 
 
 export default function Post({ postData, allPostsData, allPostsData_game }) {
@@ -32,25 +34,33 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
             }
 
             return (
-                <Row >
-                    <Col md="3">
+                <Row className={styles.postAll}>
+                    <Col md="3" className={styles.TOC}>
                         <Toc content={postData.fileContents} type={"배우기"} cate={postData.cate} currentTitle={currentTitle} />
                     </Col>
-                    <Col md="7">
+                    <Col md="8">
                         <article className={styles.post}>
-                            <p>
-                                {postData.cate}
-                            </p>
                             <div
                                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                             />
-                        </article>
-                        <div>
-                            {preTitle && (<a href={`/posts/${preId}`}>{preTitle}</a>)}
                             <hr></hr>
-                            {nextTitle && (<a href={`/posts/${nextId}`}>{nextTitle}</a>)}
-                            <br></br><br></br>
-                        </div>
+                            <Row>
+                                {preTitle && (
+                                    <Col md="6">
+                                        <a href={`/posts/${preId}`}>{preTitle}</a>
+                                    </Col>
+                                )}
+                                {nextTitle && (
+                                    <Col md="6" className={styles.right}>
+                                        <a href={`/posts/${nextId}`}>{nextTitle}</a>
+                                    </Col>
+                                )}
+                            </Row>
+                        </article>
+
+                    </Col>
+                    <Col md="1">
+                        <ML2 />
                     </Col>
                 </Row>
             )
@@ -82,26 +92,32 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
             }
 
             return (
-                <Row>
-                    <Col md="3">
+                <Row className={styles.postAll}>
+                    <Col md="3" className={styles.TOC}>
                         <Toc content={postData.fileContents} type={"응용하기"} cate={postData.cate} currentTitle={currentTitle} />
                     </Col>
-                    <Col md="7">
+                    <Col md="8">
                         <article className={styles.post}>
-                            <p>
-                                {postData.title}
-                            </p>
                             <div
                                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                             />
-                            <div>
-                                {preTitle && (<a href={`/posts/${preId}`}>{preTitle}</a>)}
-                                <hr></hr>
-                                {nextTitle && (<a href={`/posts/${nextId}`}>{nextTitle}</a>)}
-                                <br></br><br></br>
-                            </div>
+                            <hr></hr>
+                            <Row>
+                                {preTitle && (
+                                    <Col md="6">
+                                        <a href={`/posts/${preId}`}>{preTitle}</a>
+                                    </Col>
+                                )}
+                                {nextTitle && (
+                                    <Col md="6" className={styles.right}>
+                                        <a href={`/posts/${nextId}`}>{nextTitle}</a>
+                                    </Col>
+                                )}
+                            </Row>
                         </article>
-
+                    </Col>
+                    <Col md="1">
+                        <ML2 />
                     </Col>
                 </Row>
             )

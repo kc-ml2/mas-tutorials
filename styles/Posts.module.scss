@@ -1,20 +1,61 @@
 @import './variable';
 
-.post {
+.postAll {
+    padding-bottom: 5rem;
 
-    color: $basic;
-    line-height: 32px;
-    word-spacing: 0.8px;
-    font-weight: 300;
+    .right {
+        text-align: right; 
+    }
+
+    .TOC {
+        // border-right: 1px solid $gray;
+        max-width: 300px;
+        padding: 0;
+     }
+
+     @media (max-width: 950px) {
+        .TOC {
+           display: none;
+        }
+        
+    }
+    
 
     a {
         color: $purple;
         font-weight: 600;
     }
 
+    hr {
+        border: 0.1px solid $basic;
+     }
+}
+
+
+.post {
+    color: $basic;
+    line-height: 35px;
+    word-spacing: 0.8px;
+    font-weight: 300;
+    padding-left: 5rem;
+    padding-right: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    a {
+        color: $purple;
+        font-weight: 500;
+    }
+
     STRONG {
         font-weight: 600;
         color: $dark;
+    }
+
+    PRE {
+        background-color: $lightgray;
+        padding: 1rem;
+        color: $code;
     }
 
     h2 {
@@ -91,4 +132,5 @@
         padding-top: 1rem;
 
     }
+
 }
