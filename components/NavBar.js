@@ -7,10 +7,6 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    Dropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
 } from 'reactstrap'
 import styles from '../styles/NavBar.module.scss'
 
@@ -32,7 +28,7 @@ export default function NavBar({ }) {
 
     return (
 
-        <Navbar expand="md" className={`${styles.fixedTop}`, `${styles.Nav}`} >
+        <Navbar expand="md" className={styles.Nav}>
             <NavbarBrand href="/" className={styles.logo}>
                 <Image src={logo} alt="logo" width="54" height="54" priority={true}></Image>
             </NavbarBrand>
@@ -52,7 +48,7 @@ export default function NavBar({ }) {
                 onExited={onCollapseExited}
                 id={styles.space}
             >
-                <Nav navbar className={styles.right}>
+                <Nav navbar>
                     <NavItem className={styles.items}>
                         <div className={styles.dropdown}>
                             <button className={styles.dropbtn}>배우기 <i>▼</i>

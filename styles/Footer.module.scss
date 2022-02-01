@@ -18,10 +18,10 @@
 }
 
 .icon {
-  display: flex;
-  img{
-    display: flex;
-  }
+
+  display:flex;
+  justify-content: end;
+
 
   .iconItem {
     min-width: 24px;

@@ -1,14 +1,5 @@
 @import './variable';
 
-.fixedTop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 100;
-    margin: 0 auto;
-  }
-
 .logo {
   padding: 0;
   margin: 0 auto;
@@ -16,6 +7,11 @@
 }
   
 .Nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
     background-color: white;
     padding-left: 8%;
     padding-right: 1%;
@@ -38,15 +34,10 @@
       background: $dark;
     }
 
-    .right {
-      justify-content: end;
-      text-align: end;
-      color: white;
       .items {
         padding-left: 1rem;
-        color: white;
       }
-    }
+
 
 }
 
@@ -62,7 +53,7 @@
 
 //dropdown
 .dropdown {
-    float: left;
+    float: right;
     overflow: hidden;
     .dropbtn { 
         border: none;
@@ -70,7 +61,6 @@
         color: $basic;
         padding: 14px 16px;
         background-color: inherit;
-        margin: 0;
     }
     .dropdown_content {
         display: none;
