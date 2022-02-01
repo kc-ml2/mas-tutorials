@@ -44,11 +44,19 @@ Figure 3 (b)에서와 같이 각각의 agent는 자신의 observation 과 action
 
 이중 1)의 경우 위에서 알고리즘의 구조를 통해 해결을 하였고 2) 와 3)은 사실상 비슷한 이야기라 생각됩니다. 우선 counterfactual baseline에 대해 이야기하기 위해서는 **difference reward** 라는 개념으로 거슬러 올라가야합니다. 특정 action의 기여도를 측정하기 위해 $R(s,a)$ 에서 $R(s, \langle a^{-i}, c^i \rangle)$ 을 뺌으로서 agent $i$ 의 action $a^i$ 의 기여도를 정의할 수 있습니다. 여기서  $c^i$ 는 default action이라고 불리며 어떤 임의의 기준점이라고 해석하시면 됩니다. 이렇게 agent $i$ 와는 독립적인 default action을 설정하는 방법 외에 Wolpert & Tumer (2002)에서 제시한 *aristocrat utility* 에서는 agent $i$ 에 대한 의존성을 없애기위한 방법으로 agent $i$ 의 action을 marginalize out하여 $R(s, a) - \mathbb{E}_{b^i \sim \pi^i}(R(s, \langle a^{-i}, b^i \rangle))$ 로 나타낼 수 있습니다. 그리고 COMA에서는 이를 $Q$로 확장하여 다음과 같이 advantage를 정의 합니다.
 
-$$A(s,a) = Q(s,a) - \sum \pi(b^i \vert s)Q(s, \langle a^{-i}, b^i \rangle)$$
+$$
+\begin{aligned} 
+A(s,a) = Q(s,a) - \sum \pi(b^i \vert s)Q(s, \langle a^{-i}, b^i \rangle)
+\end{aligned} 
+$$
 
 사실 이 식은 single-agent인 상황을 가정하고 대입하여 생각해보면 흔히 사용하는 advantage $A= Q-V$ 의 형태와 동일합니다. 다만 multi-agent인 상황에서 하나를 제외한 나머지 agent들을 환경의 일부로 생각한 뒤 고정시키고 그 하나의 agent관점에서 joint-action에 대해 expectation을 취하는 것과 비교했을때 baseline 부분을 counterfactual이라고 해석하는 접근법이 재미있는 부분이였습니다. 그리고 이를 사용하여 논문에서 제시하는 최종적인 COMA의 gradient함수는 다음과 같습니다.
 
-$$g = \mathbb{E}_{\boldsymbol{\pi}} \left[ \sum\limits_a \nabla_\theta \log \pi^a(u^a\vert\tau^a)A^a(s,\boldsymbol{u})\right]$$
+$$
+\begin{aligned} 
+g = \mathbb{E}_{\boldsymbol{\pi}} \left[ \sum\limits_a \nabla_\theta \log \pi^a(u^a\vert\tau^a)A^a(s,\boldsymbol{u})\right]
+\end{aligned} 
+$$
 
 여기서 추가로 위의 gradient를 joint policy $\boldsymbol{\pi}(\boldsymbol{u}\vert s) = \prod\limits_a \pi^a(u^a \vert s)$ 에 대해 정리하면 원래 single-agent에서 사용한 policy gradient의 형태와 동일해 진다는 것 또한 보였습니다. 
 

@@ -40,7 +40,11 @@ cate: CH1
 
 위의 설명은 상당히 수학적인 표현을 많이 담고있는데 여기서 익숙해지면 유용한 것들이 많습니다. 우선 strategy(전략)의 표현방법입니다. 존 내쉬의 글에서와 같이 일반적으로 그리고 MARL의 context 에서도 [tuple](https://en.wikipedia.org/wiki/Tuple#:~:text=In%20mathematics%2C%20a%20tuple%20is,is%20a%20non%2Dnegative%20integer.) 형태의 표현을 자주 사용합니다. 우선 총 $n$명으로 이루어진 플레이어들의 집합을 set $\mathcal{N}$이라 하겠습니다, $$\mathcal{N}=\{1, 2, ..., n\}$$. 총 $n$ 명의 플레이어가 존재하고 어느 한 플레이어를 $i$로 표현할때, $i \in \mathcal{N}$, 해당 플레이어의 strategy를  $$\sigma_i$$라고 표기하겠습니다. 그렇다면 존 내쉬가 언급한 "n-tuple(n개의 요소를 가진 튜플) of strategies"는 $$\boldsymbol{\sigma} = (\sigma_1, \sigma_2, ..., \sigma_n)$$로 표기할 수 있습니다. 이를 한번 더 간단히 하여 플레이어 $i$ 의 strategy $$\sigma_i$$를 제외한 나머지 n-1명 플레이어들의 strategies를 하나로 묶어 $\sigma_{-i}$로 표시할 수 있습니다. 이렇게 묶음으로 표시되는 전략들의 payoff의 기댓값을 $R(\boldsymbol\sigma)$이라는 함수로 표현하고 앞서 말한 내쉬균형을 만족하는 전략을 $\sigma^*$로 표시하면 내쉬균형은 다음과 같이 표기할 수 있습니다. 
 
-$$\forall i, \: R_i(\sigma^*_i, \sigma^*_{-i}) \ge R_i(\sigma'_i, \sigma^*_{-i}) \: \forall \sigma'$$
+$$
+\begin{aligned}
+\forall i, \: R_i(\sigma^*_i, \sigma^*_{-i}) \ge R_i(\sigma'_i, \sigma^*_{-i}) \: \forall \sigma'
+\end{aligned}
+$$
 
 여기서 가장 중요한점은 부등호 양변의 유일한 차이점인 $$\sigma_i^*$$과 $$\sigma_i'$$ 입니다. 즉 나 외의 모든 플레이어들이 어떤 전략$$\sigma_{-i}^*$$ 에 따라 행동할 때, 내가 고를 수 있는 전략 중 기대효용(Expected payoff)가 가장 큰 최선의 선택이 $$\sigma_i^*$$라는 것을 의미합니다. 이론적인 측면에서 Nash Equilibrium은 기계학습이 일반적으로 도달하려하는 이상적인 상태(Optimal state), 즉 "나"를 더이상 좋게 만들 수 없는 상태를 의미하지는 않습니다. NE이 unique한 개념이 아니기도 하며 NE가 고려하는 것은 전략적 상황에서 최선의 선택([Best Response](https://en.wikipedia.org/wiki/Best_response#:~:text=In%20game%20theory%2C%20the%20best,29%3B%20Gibbons%201992%2C%20pp.))들이 모여 균형을 찾은 것일 뿐 "나의 이상적인 상태"를 직접적으로 의미하진 않기 때문입니다. 하지만 NE가 unique한 경우에는 모든 플레이어들의 전략을 고려했을 때 취할 수 있는 최선의 전략을 의미하기 때문에 MARL의 목표와 상통하게 됩니다.
 
