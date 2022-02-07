@@ -1,0 +1,17 @@
+@import './variable';
+
+.main {
+    margin: 5rem;
+    margin-top: 10rem;
+    min-height: 80vh;
+
+    a {
+        color: $purple;
+        outline:0;
+    }
+
+    a:hover {
+        font-weight: 500;
+        text-decoration: none;
+    }
+}

@@ -4,4 +4,4 @@ type: game
 order: 4
 cate: part2
 ---
-.
+
