@@ -1,9 +1,9 @@
-/* eslint-disable @next/next/no-page-custom-font */
-/* eslint-disable @next/next/no-sync-scripts */
+import React from 'react'
 import Head from 'next/head'
 import NavBar from './NavBar'
 import Footer from './Footer'
 
+// eslint-disable-next-line react/prop-types
 export default function Layout({ children }) {
 
     return (

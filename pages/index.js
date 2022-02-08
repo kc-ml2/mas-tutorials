@@ -1,3 +1,4 @@
+import React from 'react'
 import { Row, Col } from 'reactstrap'
 import styles from '../styles/main.module.scss'
 

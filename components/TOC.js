@@ -7,6 +7,7 @@ import LearnIndex from './LearnIndex'
 import GameIndex from './GameIndex'
 import styles from '../styles/TOC.module.scss'
 
+// eslint-disable-next-line react/prop-types
 const Toc = ({ content, type, cate, currentTitle }) => {
 
     // activeId는 화면 상단에 위치한 제목 element 다룰 state
@@ -18,6 +19,7 @@ const Toc = ({ content, type, cate, currentTitle }) => {
 
 
     // 게시물 본문을 줄바꿈 기준으로 나누고, 제목 요소인 것만 저장
+    // eslint-disable-next-line react/prop-types
     const titles = content.split(`\n`).filter((t) => t.includes('# '));
 
     //해당 keywords에 해당하는 post, category는 bold체!!
@@ -39,6 +41,7 @@ const Toc = ({ content, type, cate, currentTitle }) => {
             // replace(/[]/gi, "") >> []안에 있는 것들 제거
             return {
                 title: item.split('# ')[1].replace(/`/g, '').trim(),
+                // eslint-disable-next-line no-misleading-character-class
                 anchor: item.split('# ')[1].replace(/`/g, '').replace(/[*/():.?!"&,📌🔎🗂️🗒️🎙️🏁]/gi, "").toLowerCase().replace(/ /gi, "-"),
                 count
             };
@@ -87,6 +90,7 @@ const Toc = ({ content, type, cate, currentTitle }) => {
 
 export default Toc;
 
+// eslint-disable-next-line no-unused-vars
 function ListItemLink(props) {
     // eslint-disable-next-line react/jsx-no-undef
     return <ListGroupItem button component="a" {...props} />;

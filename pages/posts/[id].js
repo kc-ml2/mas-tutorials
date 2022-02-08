@@ -1,4 +1,5 @@
-/* eslint-disable @next/next/no-sync-scripts */
+/* eslint-disable react/prop-types */
+import React from 'react'
 import { getAllPostIds, getPostData, getLearnPostsData, getGamePostsData } from '../../lib/posts'
 import styles from '../../styles/Posts.module.scss'
 import Toc from '../../components/TOC'
@@ -7,6 +8,7 @@ import { Row, Col } from 'reactstrap'
 
 
 
+// eslint-disable-next-line react/prop-types
 export default function Post({ postData, allPostsData, allPostsData_game }) {
 
     // blog, career에 따라 UI 다르게 만듦

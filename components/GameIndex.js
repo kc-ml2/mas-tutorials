@@ -1,6 +1,8 @@
+import React from 'react'
 import { useRouter } from 'next/router'
 import button from '../styles/Button.module.scss'
 
+// eslint-disable-next-line react/prop-types
 const GameIndex = ({ keywords }) => {
 
     const router = useRouter()

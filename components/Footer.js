@@ -1,3 +1,4 @@
+import React from 'react'
 import Image from 'next/image'
 import logo from '../public/Footer/logo.png'
 import facebook from '../public/Footer/facebook.png'

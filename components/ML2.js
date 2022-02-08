@@ -1,3 +1,4 @@
+import React from 'react'
 import Image from 'next/image'
 import logo from '../public/Nav/logo.png'
 import styles from '../styles/ML2.module.scss'
