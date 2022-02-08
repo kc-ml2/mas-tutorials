@@ -15,6 +15,7 @@ $btn-round-radius:            30px !default;
 $btn-round-radius-sm:            8px !default;
 
 
+// ML2 방문하기
 .ML2{
     border: 1px solid $basic;
     border-radius:  $btn-round-radius-sm;
@@ -34,5 +35,29 @@ $btn-round-radius-sm:            8px !default;
 
 .ML2:active {
     border: 1px solid $purple;
-    outline:0;
+    outline: none;
+}
+
+//post index용 link
+.link {
+    padding: 0;
+    background-color: transparent;
+    color: $code;
+    text-align: start;
+    border: transparent;
+    p {
+        margin: 0;
+    }
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.link:active {
+    outline: none;
+}
+
+.link:focus {
+    outline: none;
 }
