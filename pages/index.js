@@ -1,5 +1,3 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import { Row, Col } from 'reactstrap'
 import styles from '../styles/main.module.scss'
 

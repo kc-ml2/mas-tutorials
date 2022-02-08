@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import logo from '../public/Nav/logo.png'
 import {
@@ -10,9 +10,10 @@ import {
 } from 'reactstrap'
 import styles from '../styles/NavBar.module.scss'
 
-export default function NavBar({ }) {
+export default function NavBar() {
 
     const [collapseOpen, setCollapseOpen] = useState(false)
+    // eslint-disable-next-line no-unused-vars
     const [collapseOut, setCollapseOut] = useState('')
 
     const toggleCollapse = () => {
@@ -103,7 +104,6 @@ export default function NavBar({ }) {
                         </div>
                     </NavItem >
                 </Nav>
-
             </Collapse>
 
         </Navbar>
