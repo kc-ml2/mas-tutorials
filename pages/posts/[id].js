@@ -7,8 +7,6 @@ import ML2 from '../../components/ML2'
 import { Row, Col } from 'reactstrap'
 
 
-
-// eslint-disable-next-line react/prop-types
 export default function Post({ postData, allPostsData, allPostsData_game }) {
 
     // blog, career에 따라 UI 다르게 만듦
