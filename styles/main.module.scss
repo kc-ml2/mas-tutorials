@@ -15,3 +15,21 @@
         text-decoration: none;
     }
 }
+
+#row {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 5rem;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+    span {
+        line-height: 28px;
+    }
+}

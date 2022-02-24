@@ -34,12 +34,13 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
             }
 
             return (
-                <Row className={styles.postAll}>
-                    <Col md="3" className={styles.TOC}>
+                <Row className={styles.row}>
+                    <Col className={styles.TOC}>
                         <Toc content={postData.fileContents} type={"배우기"} cate={postData.cate} currentTitle={currentTitle} />
                     </Col>
-                    <Col md="8">
-                        <article className={styles.post}>
+
+                    <Col className={styles.post}>
+                        <article>
                             <div
                                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                             />
@@ -57,9 +58,9 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
                                 )}
                             </Row>
                         </article>
-
                     </Col>
-                    <Col md="1">
+
+                    <Col className={styles.ML2Link}>
                         <ML2 />
                     </Col>
                 </Row>
@@ -92,12 +93,13 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
             }
 
             return (
-                <Row className={styles.postAll}>
-                    <Col md="3" className={styles.TOC}>
+                <Row className={styles.row}>
+                    <Col className={styles.TOC}>
                         <Toc content={postData.fileContents} type={"응용하기"} cate={postData.cate} currentTitle={currentTitle} />
                     </Col>
-                    <Col md="8">
-                        <article className={styles.post}>
+
+                    <Col className={styles.post}>
+                        <article>
                             <div
                                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                             />
@@ -116,7 +118,8 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
                             </Row>
                         </article>
                     </Col>
-                    <Col md="1">
+
+                    <Col className={styles.ML2Link}>
                         <ML2 />
                     </Col>
                 </Row>

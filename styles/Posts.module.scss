@@ -1,37 +1,26 @@
 @import './variable';
 
-.postAll {
+.row {
     margin-bottom: 5rem;
     margin-top: 5rem;
+    min-height: 90vh;
+    word-wrap: break-word;
+    max-width: 1500px;
+    margin: 0 auto;
 
-    .right {
-        text-align: right; 
-    }
-
-    .TOC {
-        // border-right: 1px solid $gray;
-        max-width: 300px;
-        padding: 0;
-     }
-
-     @media (max-width: 950px) {
-        .TOC {
-           display: none;
-        }
-        
-    }
-    
-
-    a {
-        color: $purple;
-        font-weight: 600;
-    }
-
-    hr {
-        border: 0.1px solid $basic;
-     }
 }
 
+.TOC {
+    max-width: 300px;
+    padding: 0;
+ }
+
+ @media (max-width: 950px) {
+    .TOC {
+       display: none;
+    }
+    
+}
 
 .post {
     color: $basic;
@@ -39,14 +28,30 @@
     word-spacing: 0.8px;
     font-weight: 300;
     padding-left: 2rem;
-    padding-right: 3rem;
-    padding-top: 3rem;
+    padding-right: 2rem;
     padding-bottom: 3rem;
+    max-width: 1000px;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+
+    .right {
+        text-align: right; 
+    }
+
+    @media (max-width: 760px) {
+        .right {
+            text-align: start;
+        }
+    }
 
     a {
         color: $purple;
         font-weight: 500;
     }
+
+    hr {
+        border: 0.1px solid $basic;
+     }
 
     STRONG {
         font-weight: 600;
@@ -134,4 +139,22 @@
 
     }
 
+}
+
+@media (max-width: 600px) {
+    .post {
+       margin-top: 5rem;
+    }
+    
+}
+
+.ML2Link {
+    max-width: 120px;
+}
+
+@media (max-width: 1250px) {
+    .ML2Link {
+       display: none;
+    }
+    
 }

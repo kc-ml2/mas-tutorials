@@ -3,14 +3,13 @@
 .ML2 {
     max-width: 120px;
     position: fixed;
-    top: 7rem;
+    top: 9rem;
     right: 1rem;
-    margin: 1rem;
     text-align: center;
     margin-left:1rem;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1250px) {
     .ML2 {
        display: none;
     }
