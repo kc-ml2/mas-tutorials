@@ -7,7 +7,6 @@
     word-wrap: break-word;
     max-width: 1500px;
     margin: 0 auto;
-
 }
 
 .TOC {
@@ -24,15 +23,18 @@
 
 .post {
     color: $basic;
-    line-height: 35px;
+    line-height: 40px;
     word-spacing: 0.8px;
     font-weight: 300;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     padding-bottom: 3rem;
-    max-width: 1000px;
+    max-width: 950px;
     margin-top: 8rem;
     margin-bottom: 4rem;
+    font-family: Poppins;
+    font-weight: 400;
+
 
     .right {
         text-align: right; 
@@ -144,6 +146,8 @@
 @media (max-width: 600px) {
     .post {
        margin-top: 5rem;
+       padding-left: 2rem;
+       padding-right: 2rem;
     }
     
 }
@@ -157,4 +161,11 @@
        display: none;
     }
     
+}
+
+#prenext {
+    a {
+        font-weight: 700;
+        font-family: Poppins_SemiBold;
+    }
 }

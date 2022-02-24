@@ -45,7 +45,7 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
                                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                             />
                             <hr></hr>
-                            <Row>
+                            <Row id={styles.prenext}>
                                 {preTitle && (
                                     <Col md="6">
                                         <a href={`/posts/${preId}`}>{preTitle}</a>
@@ -104,7 +104,7 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
                                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                             />
                             <hr></hr>
-                            <Row>
+                            <Row id={styles.prenext}>
                                 {preTitle && (
                                     <Col md="6">
                                         <a href={`/posts/${preId}`}>{preTitle}</a>
