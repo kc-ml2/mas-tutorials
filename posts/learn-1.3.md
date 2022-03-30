@@ -52,7 +52,7 @@ of interactions between player strategies in terms of individual payoffs."
 ### Symmetric / Asymmetric
 
 게임이 대칭이라는 표현은 플레이어가 얻을 수 있는 payoff의 값이 특정 agent의 identity와는 상관이 없이 어떤 상황에서 어떤 전략을 택하였는가에만 의존하는 경우를 말합니다. 모든 agent의 action space가 동일하며 joint action pair에 따른 동일한 payoff function을 공유합니다.
-예를들어 Fig. 5 에서 볼 수 있는 normal form game의 경우 두명의 플레이어가 모두 down이라는 action을 선택 할 경우 받는 reward가 각각 (3,1)으로 서로 다른 reward를 받기때문에 assymetric한 게임이라고 볼 수 있습니다. 
+예를들어 Fig. 5 에서 볼 수 있는 normal form game의 경우 두명의 플레이어가 모두 down이라는 action을 선택 할 경우 받는 reward가 각각 (3,1)으로 서로 다른 reward를 받기때문에 asymmetric한 게임이라고 볼 수 있습니다. 
 
 FYI: Symmetric Game은 Symmetric equilibrium과의 혼동에 주의해야합니다. Symmetric equilibrium은 게임의 플레이어들이 같은 strategy를 선택하는 것이 equilibrium이 되는 경우를 말합니다. Finite symmetric game은 symmetric equilibrium을 갖고있다는 성질이 있지만 이 equilibrium이 유일한 균형이란 보장은 없습니다.
 

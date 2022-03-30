@@ -77,6 +77,7 @@ const LearnIndex = ({ keywords }) => {
                         <button className={button.link} onClick={() => router.replace('/posts/learn-4.1')} >
                             <p dangerouslySetInnerHTML={{ __html: makeBold('4.1 MADDPG', keywords) }}></p>
                         </button>
+                        <br></br>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-4.2')} >
                             <p dangerouslySetInnerHTML={{ __html: makeBold('4.2 COMA', keywords) }}></p>
                         </button>
