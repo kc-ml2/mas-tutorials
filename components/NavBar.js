@@ -31,7 +31,7 @@ export default function NavBar() {
 
         <Navbar expand="md" className={styles.Nav}>
             <NavbarBrand href="/" className={styles.logo}>
-                <Image src={logo} alt="logo" width="54" height="54" priority={true}></Image>
+                <Image src={logo} alt="logo" width="110.9" height="54" priority={true}></Image>
             </NavbarBrand>
             <button
                 aria-expanded={collapseOpen}
