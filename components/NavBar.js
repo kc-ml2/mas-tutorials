@@ -49,7 +49,7 @@ export default function NavBar() {
                 onExited={onCollapseExited}
                 id={styles.space}
             >
-                <Nav navbar>
+                <Nav navbar className={styles.nav}>
                     <NavItem className={styles.items}>
                         <div className={styles.dropdown}>
                             <button className={styles.dropbtn}>배우기 <i>▼</i>
@@ -93,7 +93,7 @@ export default function NavBar() {
                                 <p>PART1</p>
                                 <a href='/posts/game-1intro'>1. 강화학습을 통한 Snake 학습시키기</a> <br></br>
                                 <a href='/posts/game-1.1' >1.1 Previous ApproachesL</a> <br></br>
-                                <a href='/posts/game-1.2' >1.2 Single-Agent Algorithm in Multi-Snakey</a>
+                                <a href='/posts/game-1.2' >1.2 Single-Agent Algorithm in Multi-Snake</a>
                                 <hr></hr>
 
                                 <p>PART2</p>
