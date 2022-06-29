@@ -1,27 +1,25 @@
 @import './variable';
 
 .footer {
-    padding-left: 8%;
-    padding-right: 8%;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-    background-color: black;
-    color: white;
-    min-height: 15vh;
-    max-width: 4500px;
-    margin: 0 auto;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: #212529;
+  color: white;
+  min-height: 15vh;
+  max-width: 4500px;
+  margin: 0 auto;
 }
 
 .copyright {
-  font-size : 0.8rem;
+  font-size: 0.8rem;
   text-align: center;
 }
 
 .icon {
-
-  display:flex;
+  display: flex;
   justify-content: end;
-
 
   .iconItem {
     min-width: 24px;
@@ -34,15 +32,13 @@
   margin: -10px;
 }
 
+@media (max-width: 800px) {
+  .copyright {
+    padding-top: 1rem;
+    text-align: start;
+  }
 
-  @media (max-width: 800px) {
-    .copyright {
-      padding-top: 1rem;
-      text-align: start;
-    }
-    
-    .icon {
-      padding-top: 1rem;
-    }
-
+  .icon {
+    padding-top: 1rem;
+  }
 }

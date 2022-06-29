@@ -9,7 +9,7 @@ export default function Layout({ children }) {
     return (
         <>
             <Head>
-                <title>Tutorials</title>
+                <title>MAS Tutorial</title>
                 <link rel="icon" href="/favicon.png" />
                 <link
                     rel="stylesheet"
@@ -19,8 +19,8 @@ export default function Layout({ children }) {
                 />
                 <link rel="shortcut icon" href="/favicon.png" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
-                <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-                <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+                {/* <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" /> */}
             </Head>
             <NavBar />
             <main>{children}</main>

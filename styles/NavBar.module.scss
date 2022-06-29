@@ -31,7 +31,7 @@
     height: 2px;
     margin-bottom: 5px;
     position: relative;
-    background: $dark;
+    background: $basic;
   }
 
   .items {
@@ -40,10 +40,9 @@
 }
 
 .nav {
-  //for safari browser
-  position: absolute;
-  right: 8%;
-  // for safari browser
+  // for safari align right
+  margin-left: auto;
+  margin-right: 0;
 }
 
 #collapseButton {
@@ -92,7 +91,7 @@
     }
 
     p {
-      color: $dark;
+      color: $basic;
       display: block;
       text-align: left;
       font-weight: 600;

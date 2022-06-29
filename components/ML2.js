@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import logo from '../public/favicon.png'
+import logo from '../public/favicon2.png'
 import styles from '../styles/ML2.module.scss'
 import button from '../styles/Button.module.scss'
 

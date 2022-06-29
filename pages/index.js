@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Row, Col } from 'reactstrap'
 import styles from '../styles/main.module.scss'
 import Image from 'next/image'
 
 export default function Home() {
+  useEffect(() => {
+    if ('caches' in window) {
+      caches.keys().then((names) => {
+        // Delete all the cache files
+        names.forEach(name => {
+          caches.delete(name)
+        })
+      })
+    }
+  }, [])
+
   return (
     <div className={styles.main}>
       <Row id={styles.row}>

@@ -21,7 +21,6 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
             const nextPosts = allPostsData[Object.keys(allPostsData).filter(order => allPostsData[order].order === next)]
 
             var currentTitle = allPostsData[Object.keys(allPostsData).filter(id => allPostsData[id].id === postData.id)].title
-            console.log(currentTitle)
 
             if (prePosts !== undefined) {
                 var preTitle = allPostsData[Object.keys(allPostsData).filter(order => allPostsData[order].order === pre)].title
