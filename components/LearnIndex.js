@@ -4,9 +4,11 @@ import button from '../styles/Button.module.scss'
 import { LEARN_TITLE_ONE, LEARN_TITLE_TWO, LEARN_TITLE_THREE, LEARN_TITLE_FOUR } from '../utils/const'
 
 // eslint-disable-next-line react/prop-types
-const LearnIndex = ({ keywords }) => {
+const LearnIndex = ({ content, type, cate, currentTitle }) => {
 
     const router = useRouter()
+
+    var keywords = [cate, currentTitle]
 
     const makeBold = (item, keyword) => {
         return item.replace(new RegExp('(\\b)(' + keyword.join('|') + ')(\\b)', 'ig'), '$1<b>$2</b>$3');

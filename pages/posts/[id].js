@@ -5,6 +5,7 @@ import styles from '../../styles/Posts.module.scss'
 import TOC from '../../components/TOC'
 import ML2 from '../../components/ML2'
 import { Row, Col } from 'reactstrap'
+import LearnIndex from '../../components/LearnIndex'
 
 
 export default function Post({ postData, allPostsData, allPostsData_game }) {
