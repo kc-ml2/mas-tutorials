@@ -4,12 +4,12 @@ import logo from '../public/Footer/logo.png'
 import facebook from '../public/Footer/facebook.png'
 import insta from '../public/Footer/insta.png'
 import github from '../public/Footer/github.png'
+import linkedin from '../public/Footer/linkedin.png'
 import {
     Row,
     Col,
 } from 'reactstrap'
 import styles from '../styles/Footer.module.scss'
-
 
 export default function Footer() {
 
@@ -28,6 +28,18 @@ export default function Footer() {
                 </Col>
                 <Col md="3" className={styles.icon}>
                     <div className={styles.iconItem}>
+                        <a href="https://github.com/kc-ml2" target="_blank" rel="noreferrer">
+                            <Image src={github} alt="logo" width="24" height="24" priority={true}></Image>
+                        </a>
+                    </div>
+
+                    <div className={styles.iconItem}>
+                        <a href="https://www.linkedin.com/company/kc-ml2/" target="_blank" rel="noreferrer">
+                            <Image src={linkedin} alt="logo" width="24" height="24" priority={true}></Image>
+                        </a>
+                    </div>
+
+                    <div className={styles.iconItem}>
                         <a href="https://www.facebook.com/KCML2/" target="_blank" rel="noreferrer">
                             <Image src={facebook} alt="logo" width="24" height="24" priority={true}></Image>
                         </a>
@@ -39,11 +51,6 @@ export default function Footer() {
                         </a>
                     </div>
 
-                    <div className={styles.iconItem}>
-                        <a href="https://github.com/kc-ml2" target="_blank" rel="noreferrer">
-                            <Image src={github} alt="logo" width="24" height="24" priority={true}></Image>
-                        </a>
-                    </div>
                 </Col>
                 <Col>
                 </Col>
