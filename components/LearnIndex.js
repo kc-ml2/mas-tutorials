@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import button from '../styles/Button.module.scss'
+import { LEARN_TITLE_ONE, LEARN_TITLE_TWO, LEARN_TITLE_THREE, LEARN_TITLE_FOUR } from '../utils/const'
 
 // eslint-disable-next-line react/prop-types
 const LearnIndex = ({ keywords }) => {
@@ -18,16 +19,16 @@ const LearnIndex = ({ keywords }) => {
                     <details>
                         <summary dangerouslySetInnerHTML={{ __html: makeBold('CH1', keywords) }} ></summary>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-1intro')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('1. Introduction', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_ONE.ONE, keywords) }}></p>
                         </button>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-1.1')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('1.1 Quick review of Single-Agent RL', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_ONE.TWO, keywords) }}></p>
                         </button>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-1.2')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('1.2 Multi-agent and Game Theory', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_ONE.THREE, keywords) }}></p>
                         </button>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-1.3')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('1.3 Known Environments in MARL', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_ONE.FOUR, keywords) }}></p>
                         </button>
                     </details>
                 </li>
@@ -35,16 +36,16 @@ const LearnIndex = ({ keywords }) => {
                     <details>
                         <summary dangerouslySetInnerHTML={{ __html: makeBold('CH2', keywords) }} ></summary>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-2intro')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('2. Problems in MARL', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_TWO.ONE, keywords) }}></p>
                         </button>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-2.1')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('2.1 Problem definition in MARL', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_TWO.TWO, keywords) }}></p>
                         </button>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-2.2')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('2.2 Information in MARL', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_TWO.THREE, keywords) }}></p>
                         </button>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-2.3')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('2.3 Types of MARL Problems', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_TWO.FOUR, keywords) }}></p>
                         </button>
                     </details>
                 </li>
@@ -52,19 +53,19 @@ const LearnIndex = ({ keywords }) => {
                     <details>
                         <summary dangerouslySetInnerHTML={{ __html: makeBold('CH3', keywords) }} ></summary>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-3intro')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('3. Emergent Behavior', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_THREE.ONE, keywords) }}></p>
                         </button>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-3.1')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('3.1 Complexity via Competition', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_THREE.TWO, keywords) }}></p>
                         </button>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-3.2')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('3.2 Sparse reward problem', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_THREE.THREE, keywords) }}></p>
                         </button>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-3.3')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('3.3 Opponent selection', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_THREE.FOUR, keywords) }}></p>
                         </button>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-3.4')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('3.4 Randomizing environments', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_THREE.FIVE, keywords) }}></p>
                         </button>
                     </details>
                 </li>
@@ -72,14 +73,14 @@ const LearnIndex = ({ keywords }) => {
                     <details>
                         <summary dangerouslySetInnerHTML={{ __html: makeBold('CH4', keywords) }} ></summary>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-4intro')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('4. More MDRL Algorithm', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_FOUR.ONE, keywords) }}></p>
                         </button>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-4.1')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('4.1 MADDPG', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_FOUR.TWO, keywords) }}></p>
                         </button>
                         <br></br>
                         <button className={button.link} onClick={() => router.replace('/posts/learn-4.2')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold('4.2 COMA', keywords) }}></p>
+                            <p dangerouslySetInnerHTML={{ __html: makeBold(LEARN_TITLE_FOUR.THREE, keywords) }}></p>
                         </button>
                     </details>
                 </li>

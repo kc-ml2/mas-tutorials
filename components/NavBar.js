@@ -9,6 +9,7 @@ import {
     NavItem,
 } from 'reactstrap'
 import styles from '../styles/NavBar.module.scss'
+import { LEARN_TITLE_ONE, LEARN_TITLE_TWO, LEARN_TITLE_THREE, LEARN_TITLE_FOUR, GAME_TITLE_ONE, GAME_TITLE_TWO } from '../utils/const'
 
 export default function NavBar() {
 
@@ -56,31 +57,31 @@ export default function NavBar() {
                             </button>
                             <div className={styles.dropdown_content}>
                                 <p>CH1</p>
-                                <a href='/posts/learn-1intro'>1. Introduction</a> <br></br>
-                                <a href='/posts/learn-1.1' >1.1 Quick review of Single-Agent RL</a> <br></br>
-                                <a href='/posts/learn-1.2' >1.2 Multi-agent and Game Theory</a> <br></br>
-                                <a href='/posts/learn-1.3'>1.3 Known Environments in MARL</a>
+                                <a href='/posts/learn-1intro'>{LEARN_TITLE_ONE.ONE}</a> <br></br>
+                                <a href='/posts/learn-1.1' >{LEARN_TITLE_ONE.TWO}</a> <br></br>
+                                <a href='/posts/learn-1.2' >{LEARN_TITLE_ONE.THREE}</a> <br></br>
+                                <a href='/posts/learn-1.3'>{LEARN_TITLE_ONE.FOUR}</a>
                                 <hr></hr>
 
                                 <p>CH2</p>
-                                <a href='/posts/learn-2intro' >2. Problems in MARL</a> <br></br>
-                                <a href='/posts/learn-2.1'>2.1 Problem definition in MARL</a> <br></br>
-                                <a href='/posts/learn-2.2'>2.2 Information in MARL</a> <br></br>
-                                <a href='/posts/learn-2.3'>2.3 Types of MARL Problems</a>
+                                <a href='/posts/learn-2intro' >{LEARN_TITLE_TWO.ONE}</a> <br></br>
+                                <a href='/posts/learn-2.1'>{LEARN_TITLE_TWO.TWO}</a> <br></br>
+                                <a href='/posts/learn-2.2'>{LEARN_TITLE_TWO.THREE}</a> <br></br>
+                                <a href='/posts/learn-2.3'>{LEARN_TITLE_TWO.FOUR}</a>
                                 <hr></hr>
 
                                 <p>CH3</p>
-                                <a href='/posts/learn-3intro'>3. Emergent Behavior</a> <br></br>
-                                <a href='/posts/learn-3.1'>3.1 Complexity via Competition</a> <br></br>
-                                <a href='/posts/learn-3.2'>3.2 Sparse reward problem</a> <br></br>
-                                <a href='/posts/learn-3.3'>3.3 Opponent selection</a> <br></br>
-                                <a href='/posts/learn-3.4'>3.4 Randomizing environments</a>
+                                <a href='/posts/learn-3intro'>{LEARN_TITLE_THREE.ONE}</a> <br></br>
+                                <a href='/posts/learn-3.1'>{LEARN_TITLE_THREE.TWO}</a> <br></br>
+                                <a href='/posts/learn-3.2'>{LEARN_TITLE_THREE.THREE}</a> <br></br>
+                                <a href='/posts/learn-3.3'>{LEARN_TITLE_THREE.FOUR}</a> <br></br>
+                                <a href='/posts/learn-3.4'>{LEARN_TITLE_THREE.FIVE}</a>
                                 <hr></hr>
 
                                 <p>CH4</p>
-                                <a href='/posts/learn-4intro'>4. More MDRL Algorithm</a> <br></br>
-                                <a href='/posts/learn-4.1'>4.1 MADDPG</a> <br></br>
-                                <a href='/posts/learn-4.2'>4.2 COMA</a>
+                                <a href='/posts/learn-4intro'>{LEARN_TITLE_FOUR.ONE}</a> <br></br>
+                                <a href='/posts/learn-4.1'>{LEARN_TITLE_FOUR.TWO}</a> <br></br>
+                                <a href='/posts/learn-4.2'>{LEARN_TITLE_FOUR.THREE}</a>
                             </div>
                         </div>
                     </NavItem >
@@ -91,15 +92,15 @@ export default function NavBar() {
                             </button>
                             <div className={styles.dropdown_content}>
                                 <p>PART1</p>
-                                <a href='/posts/game-1intro'>1. 강화학습을 통한 Snake 학습시키기</a> <br></br>
-                                <a href='/posts/game-1.1' >1.1 Previous ApproachesL</a> <br></br>
-                                <a href='/posts/game-1.2' >1.2 Single-Agent Algorithm in Multi-Snake</a>
+                                <a href='/posts/game-1intro'>{GAME_TITLE_ONE.ONE}</a> <br></br>
+                                <a href='/posts/game-1.1' >{GAME_TITLE_ONE.TWO}</a> <br></br>
+                                <a href='/posts/game-1.2' >{GAME_TITLE_ONE.THREE}</a>
                                 <hr></hr>
 
                                 <p>PART2</p>
-                                <a href='/posts/game-2intro' >2. 학습된 Snake로 Leaderboard 참여하기</a> <br></br>
-                                <a href='/posts/game-2.1'>2.1 Snake Leaderboard 소개</a> <br></br>
-                                <a href='/posts/game-2.2'>2.2 Snake Leaderboard 참여 방법</a>
+                                <a href='/posts/game-2intro' >{GAME_TITLE_TWO.ONE}</a> <br></br>
+                                <a href='/posts/game-2.1'>{GAME_TITLE_TWO.TWO}</a> <br></br>
+                                <a href='/posts/game-2.2'>{GAME_TITLE_TWO.THREE}</a>
                             </div>
                         </div>
                     </NavItem >

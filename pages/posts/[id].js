@@ -2,14 +2,14 @@
 import React from 'react'
 import { getAllPostIds, getPostData, getLearnPostsData, getGamePostsData } from '../../lib/posts'
 import styles from '../../styles/Posts.module.scss'
-import Toc from '../../components/TOC'
+import TOC from '../../components/TOC'
 import ML2 from '../../components/ML2'
 import { Row, Col } from 'reactstrap'
 
 
 export default function Post({ postData, allPostsData, allPostsData_game }) {
 
-    // blog, career에 따라 UI 다르게 만듦
+    // Learn(배우기), Game(응용하기) 파트
     function LearnPosts() {
 
         if (postData.type === "learn") {
@@ -35,7 +35,7 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
             return (
                 <Row className={styles.row}>
                     <Col className={styles.TOC}>
-                        <Toc content={postData.fileContents} type={"배우기"} cate={postData.cate} currentTitle={currentTitle} />
+                        <TOC content={postData.fileContents} type={"배우기"} cate={postData.cate} currentTitle={currentTitle} />
                     </Col>
 
                     <Col className={styles.post}>
@@ -94,7 +94,7 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
             return (
                 <Row className={styles.row}>
                     <Col className={styles.TOC}>
-                        <Toc content={postData.fileContents} type={"응용하기"} cate={postData.cate} currentTitle={currentTitle} />
+                        <TOC content={postData.fileContents} type={"응용하기"} cate={postData.cate} currentTitle={currentTitle} />
                     </Col>
 
                     <Col className={styles.post}>
