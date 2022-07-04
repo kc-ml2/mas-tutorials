@@ -100,7 +100,6 @@ export default function NavBar() {
                                 <p>PART2</p>
                                 <a href='/posts/game-2intro' >{GAME_TITLE_TWO.ONE}</a> <br></br>
                                 <a href='/posts/game-2.1'>{GAME_TITLE_TWO.TWO}</a> <br></br>
-                                <a href='/posts/game-2.2'>{GAME_TITLE_TWO.THREE}</a>
                             </div>
                         </div>
                     </NavItem >

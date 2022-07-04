@@ -5,8 +5,6 @@ import styles from '../../styles/Posts.module.scss'
 import TOC from '../../components/TOC'
 import ML2 from '../../components/ML2'
 import { Row, Col } from 'reactstrap'
-import LearnIndex from '../../components/LearnIndex'
-
 
 export default function Post({ postData, allPostsData, allPostsData_game }) {
 
@@ -43,6 +41,7 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
                         <article>
                             <div
                                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+                                id={styles.article}
                             />
                             <hr></hr>
                             <Row id={styles.prenext}>
@@ -102,6 +101,7 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
                         <article>
                             <div
                                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+                                id={styles.article}
                             />
                             <hr></hr>
                             <Row id={styles.prenext}>

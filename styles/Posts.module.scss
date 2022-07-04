@@ -49,6 +49,10 @@
     font-weight: 500;
   }
 
+  a:hover {
+    text-decoration: none;
+  }
+
   hr {
     border: 0.1px solid $basic;
   }
@@ -62,11 +66,31 @@
     background-color: $lightgray;
     padding: 1rem;
     color: $code;
+    border-radius: 5px;
+    line-height: 200%;
+
+    CODE {
+      color: $code;
+    }
+  }
+
+  CODE {
+    font-style: normal;
+    color: $red;
+    background-color: $lightgray;
+    border-radius: 5px;
+    padding: 0.2rem;
+  }
+
+  DEL {
+    color: $green;
+    text-decoration: none;
   }
 
   h2 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    font-weight: 600;
   }
 
   h3 {
@@ -137,6 +161,27 @@
     margin: 0 auto;
     padding-top: 1rem;
   }
+
+  // Blockquote {
+  //   background-color: $lightgray;
+  //   padding-left: 1rem;
+  //   padding-right: 1rem;
+  //   padding-top: 0.5rem;
+  //   padding-bottom: 0.1rem;
+  //   border-left: 3px solid $code;
+  //   a {
+  //     color: $code;
+  //     font-weight: 700;
+  //   }
+  //   a:hover {
+  //     color: $purple;
+  //     text-decoration: none;
+  //   }
+  // }
+}
+
+#article {
+  margin-bottom: 4rem;
 }
 
 @media (max-width: 600px) {

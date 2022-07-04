@@ -25,7 +25,11 @@
 
   a {
     color: $code !important;
-    font-weight: 400 !important;
+  }
+
+  a:hover {
+    text-decoration: none;
+    font-weight: 600;
   }
 
   .index {
@@ -37,7 +41,6 @@
 
     a {
       color: $code !important;
-      font-weight: 300 !important;
     }
 
     b {

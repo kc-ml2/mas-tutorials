@@ -38,9 +38,6 @@ const GameIndex = ({ keywords }) => {
                         <button className={button.link} onClick={() => router.replace('/posts/game-2.1')} >
                             <p dangerouslySetInnerHTML={{ __html: makeBold(GAME_TITLE_TWO.TWO, keywords) }}></p>
                         </button>
-                        <button className={button.link} onClick={() => router.replace('/posts/game-2.2')} >
-                            <p dangerouslySetInnerHTML={{ __html: makeBold(GAME_TITLE_TWO.THREE, keywords) }}></p>
-                        </button>
                     </details>
                 </li>
             </ul>

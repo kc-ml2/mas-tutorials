@@ -33,7 +33,6 @@ export const GAME_TITLE_ONE = {
 }
 
 export const GAME_TITLE_TWO = {
-    ONE: '2. 학습된 Snake로 Leaderboard 참여하기',
-    TWO: '2.1 Snake Leaderboard 소개',
-    THREE: '2.2 Snake Leaderboard 참여 방법',
+    ONE: '2. MARLenv 소개',
+    TWO: '2.1 MARLenv 가이드',
 }
