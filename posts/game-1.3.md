@@ -19,12 +19,11 @@ initial body length of snakes: 3
 vision range of snakes: None(= Full observability)
 number of frames to stack: 1
 observer: “snake”
-
 |||
 |:-:|:-:|
-|![eighty](https://user-images.githubusercontent.com/103443013/176834875-7b770b79-36d7-4e58-bdb8-fbe5500c61be.png)|![sixty](https://user-images.githubusercontent.com/103443013/176836239-317bb3f5-8c30-405b-a64b-ed102845968e.png)|  
+|![render](https://user-images.githubusercontent.com/103443013/177086123-17bcd5f2-761e-4d97-aae6-275021a5f10c.png)|![final](https://user-images.githubusercontent.com/103443013/177086112-2f2054ca-1946-4fbd-8560-e951a4bfd839.png)|
 
-![](https://user-images.githubusercontent.com/103443013/176857957-e2636b7e-da4e-4865-8691-9253ac5f86e0.png)
+![split](https://user-images.githubusercontent.com/103443013/177086319-2a37dcd4-9383-48bc-bf21-6f85bf41fc0b.png)
 
 ### Snake game 변형하기
 
@@ -42,16 +41,16 @@ marlenv는 연구자들이 훈련 환경의 구성요소를 필요에 따라 쉽
 4. vision range of snakes → `vision_range`
     뱀의 머리를 중심으로 상하좌우 vision_range만큼의 정사각형 grid 영역을 partial observation으로 반환합니다.  
     e.g.) vision_range가 5인 경우 observation shape는 (11, 11, 8)이 됩니다. 보다 자세한 내용은 이 [tutorial page](https://tutorials.kc-ml2.com/posts/game-1.1#113-cropped-image-with-dqn)를 참조하세요.
-    <!-- [https://tutorials.kc-ml2.com/posts/game-1.1#113-cropped-image-with-dqn]ㅋ(https://tutorials.kc-ml2.com/posts/game-1.1#113-cropped-image-with-dqn) -->
 
 5. number of frames to stack → `frame_stack`
     지정된 프레임 수 만큼의 과거 observation을 묶어서 반환합니다.
     
 6. action space → `observer`
     observer 인자를 통해 action space를 변경할 수 있습니다.
+    |||
+    |:-|:-|
     |snake|human|
-    |:-:|:-:|
-    |![snake](https://user-images.githubusercontent.com/103443013/176870599-40af961d-8f6f-41f8-8cbe-183c6085ba5f.png)|![human](https://user-images.githubusercontent.com/103443013/176870592-081b4b76-870e-442a-ade0-a00136d9743f.png)|
+    |![snake](https://user-images.githubusercontent.com/103443013/177070240-5af9fb85-3e7d-4373-85bb-09eff90af2c1.png)|![human](https://user-images.githubusercontent.com/103443013/177070233-7d5ed807-0918-4ee7-b57c-e0d7965d0db6.png)|
 
     `"snake"`의 경우 (전진, 좌회전, 우회전) 3가지의 action을 갖고
     `"human"`의 경우 (아무 행동 안하기, 상, 하, 좌, 우) 5가지의 action을 갖습니다.
