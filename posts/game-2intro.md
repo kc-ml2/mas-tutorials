@@ -7,7 +7,7 @@ cate: part2
 
 ### 2. MARLenv 소개
 
-[배우기](https://tutorials.kc-ml2.com/posts/learn-1intro)의 CH 1~3은 MARL관련된 이야기를, CH 4에서는 이를 더 확장하여 multi-agent RL을 직접 다루는 algorithm으로 접근하는 방법에 관하여 간단하게 이전 논문들을 소개하는 시간을 가졌습니다. 이후 [응용하기](https://tutorials.kc-ml2.com/posts/game-1intro)의 PART 1에서는 snake게임의 소개와 함께 single/multi agent인 상황에서 기존의 single-agent algorithm을 학습시켰을때 일어나는 일을 설명했습니다.
+[배우기](https://tutorials.kc-ml2.com/posts/learn-1intro)의 챕터 1~3은 MARL관련된 이야기를, 챕터 4에서는 이를 더 확장하여 multi-agent RL을 직접 다루는 algorithm으로 접근하는 방법에 관하여 간단하게 이전 논문들을 소개하는 시간을 가졌습니다. 이후 [응용하기](https://tutorials.kc-ml2.com/posts/game-1intro)의 PART 1에서는 snake게임의 소개와 함께 single/multi agent인 상황에서 기존의 single-agent algorithm을 학습시켰을때 일어나는 일을 설명했습니다.
 앞선 내용들을 응용해 MARL에 대한 다양한 아이디어들을 실험해 볼 수 있도록 [~MARLenv~](https://github.com/kc-ml2/MARLenv)의 사용법에 대해 소개하는 시간을 가져보도록 하겠습니다.
 
 [~MARLenv~](https://github.com/kc-ml2/MARLenv)는 ML2에서 개발한 오픈소스 강화학습 환경으로 멀티에이전트 뱀 게임이 구현되어 있습니다.

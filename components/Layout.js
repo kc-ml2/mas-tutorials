@@ -19,6 +19,8 @@ export default function Layout({ children }) {
                 />
                 <link rel="shortcut icon" href="/favicon.png" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+                {/* code theme  */}
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-one-light.css" rel="stylesheet" />
                 {/* <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" /> */}
             </Head>

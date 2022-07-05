@@ -62,25 +62,25 @@
     color: $dark;
   }
 
-  PRE {
-    background-color: $lightgray;
-    padding: 1rem;
-    color: $code;
-    border-radius: 5px;
-    line-height: 200%;
+  // PRE {
+  //   background-color: $lightgray;
+  //   padding: 1rem;
+  //   color: $code;
+  //   border-radius: 5px;
+  //   line-height: 200%;
 
-    CODE {
-      color: $code;
-    }
-  }
+  //   CODE {
+  //     color: $code;
+  //   }
+  // }
 
-  CODE {
-    font-style: normal;
-    color: $red;
-    background-color: $lightgray;
-    border-radius: 5px;
-    padding: 0.2rem;
-  }
+  // CODE {
+  //   font-style: normal;
+  //   color: $red;
+  //   background-color: $lightgray;
+  //   border-radius: 5px;
+  //   padding: 0.2rem;
+  // }
 
   DEL {
     color: $green;
