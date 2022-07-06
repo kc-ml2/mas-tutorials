@@ -35,7 +35,7 @@ Ann Nowé (2012)는 게임이론에서 다루는 게임에 대해 다음과 같�
 
 ### Simultaneous / Sequential
 
-이 분류는 게임의 진행 방식에 대한 분류입니다. 모든 agent가 동시에 자신의 action을 결정하고 움직이거나 각각 따로 결정하되 서로의 결정을 모른채 동시에 action을 적용하게 되는 경우를 동시진행, simultaneous라고 합니다. 반대로 각각 순차적으로 action을 결정하고 그것을 현재 상황에 적용을 하게 되는 경우를 순차적진행, sequential 이라 부릅니다. 흔히 이 두가지 방식에 따라 게임을 나타내는 방식도 달라지는데 simultaneous의 경우 흔히 normal
+이 분류는 게임의 진행 방식에 대한 분류입니다. 모든 agent가 동시에 자신의 action을 결정하고 움직이거나 각각 따로 결정하되 서로의 결정을 모른채 동시에 action을 적용하게 되는 경우를 동시진행, simultaneous라고 합니다. 반대로 각각 순차적으로 action을 결정하고 그것을 현재 상황에 적용을 하게 되는 경우를 순차적진행, sequential 이라 부릅니다. 흔히 이 두가지 방식에 따라 게임을 나타내는 방식도 달라지는데 simultaneous의 경우 흔히 normal form을 사용하여 게임을 나타내며 sequential 게임의 경우 extensive-form을 주로 사용합니다.
 
 ![fifty](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/NG.png)
 

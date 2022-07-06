@@ -188,6 +188,12 @@
   // }
 }
 
+.docs {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
 #article {
   margin-bottom: 4rem;
 }

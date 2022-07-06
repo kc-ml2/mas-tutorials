@@ -1,63 +1,89 @@
 @import './variable';
 
-$btn-padding-y:               7px !default;
-$btn-padding-x:               22px !default;
-$btn-line-height:             1.35em !default;
+$btn-padding-y: 7px !default;
+$btn-padding-x: 22px !default;
+$btn-line-height: 1.35em !default;
 
-$btn-padding-y-sm:            4.5px !default;
-$btn-padding-x-sm:            14.5px !default;
-$btn-line-height-sm:          1.35  !default;
+$btn-padding-y-sm: 4.5px !default;
+$btn-padding-x-sm: 14.5px !default;
+$btn-line-height-sm: 1.35 !default;
 
-$btn-padding-y-lg:            12px !default;
-$btn-padding-x-lg:            30px !default;
+$btn-padding-y-lg: 12px !default;
+$btn-padding-x-lg: 30px !default;
 
-$btn-round-radius:            30px !default;
-$btn-round-radius-sm:            8px !default;
-
+$btn-round-radius: 30px !default;
+$btn-round-radius-sm: 8px !default;
 
 // ML2 방문하기
-.ML2{
-    border: 1px solid $basic;
-    border-radius:  $btn-round-radius-sm;
-    color: $basic;
-    padding-top: $btn-padding-y-sm;
-    padding-bottom: $btn-padding-y-sm;
-    padding-right: $btn-padding-x-sm;
-    padding-left: $btn-padding-x-sm;
-    background-color: transparent;
-    font-size: 0.8rem;
+.ML2 {
+  border: 1px solid $basic;
+  border-radius: $btn-round-radius-sm;
+  color: $basic;
+  padding-top: $btn-padding-y-sm;
+  padding-bottom: $btn-padding-y-sm;
+  padding-right: $btn-padding-x-sm;
+  padding-left: $btn-padding-x-sm;
+  background-color: transparent;
+  font-size: 0.8rem;
 }
 
 .ML2:hover {
-    border: 1px solid $purple;
-    color: $purple;
+  border: 1px solid $purple;
+  color: $purple;
 }
 
 .ML2:active {
-    border: 1px solid $purple;
-    outline: none;
+  border: 1px solid $purple;
+  outline: none;
 }
 
 //post index용 link
 .link {
-    padding: 0;
-    background-color: transparent;
-    color: $code;
-    text-align: start;
-    border: transparent;
-    p {
-        margin: 0;
-    }
+  padding: 0;
+  background-color: transparent;
+  color: $code;
+  text-align: start;
+  border: transparent;
+  p {
+    margin: 0;
+  }
 }
 
 .link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .link:active {
-    outline: none;
+  outline: none;
 }
 
 .link:focus {
-    outline: none;
+  outline: none;
+}
+
+// 문서 수정하기
+.docs {
+  border: 1px solid $basic;
+  border-radius: $btn-round-radius-sm;
+  padding-right: $btn-padding-x-sm;
+  padding-left: $btn-padding-x-sm;
+  background-color: transparent;
+  font-size: 0.8rem;
+  font-weight: 600;
+  a {
+    color: $basic !important;
+  }
+}
+
+.docs:hover {
+  border: 1px solid $purple;
+  color: $purple;
+  a {
+    color: $purple !important;
+  }
+}
+
+.docs:active {
+  border: 1px solid $purple;
+  outline: none;
 }

@@ -2,6 +2,7 @@
 import React from 'react'
 import { getAllPostIds, getPostData, getLearnPostsData, getGamePostsData } from '../../lib/posts'
 import styles from '../../styles/Posts.module.scss'
+import button from '../../styles/Button.module.scss'
 import TOC from '../../components/TOC'
 import ML2 from '../../components/ML2'
 import { Row, Col } from 'reactstrap'
@@ -43,6 +44,11 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
                                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                                 id={styles.article}
                             />
+                            <Row className={styles.docs}>
+                                <button className={button.docs}>
+                                    <a href="https://github.com/kc-ml2/mas-tutorials" target="_blank" rel="noreferrer">문서 수정하기</a>
+                                </button>
+                            </Row>
                             <hr></hr>
                             <Row id={styles.prenext}>
                                 {preTitle && (
@@ -103,6 +109,11 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
                                 dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                                 id={styles.article}
                             />
+                            <Row className={styles.docs}>
+                                <button className={button.docs}>
+                                    <a href="https://github.com/kc-ml2/mas-tutorials" target="_blank" rel="noreferrer">문서 수정하기</a>
+                                </button>
+                            </Row>
                             <hr></hr>
                             <Row id={styles.prenext}>
                                 {preTitle && (
