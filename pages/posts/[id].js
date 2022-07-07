@@ -45,9 +45,7 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
                                 id={styles.article}
                             />
                             <Row className={styles.docs}>
-                                <button className={button.docs}>
-                                    <a href="https://github.com/kc-ml2/mas-tutorials" target="_blank" rel="noreferrer">문서 수정하기</a>
-                                </button>
+                                이 문서에 기여하고 싶은 내용이 있으신가요? &nbsp; <a href={`https://github.com/kc-ml2/mas-tutorials/blob/main/posts/${postData.id}.md`} target="_blank" rel="noreferrer">github에서 문서를 수정하세요!</a>
                             </Row>
                             <hr></hr>
                             <Row id={styles.prenext}>
@@ -110,9 +108,7 @@ export default function Post({ postData, allPostsData, allPostsData_game }) {
                                 id={styles.article}
                             />
                             <Row className={styles.docs}>
-                                <button className={button.docs}>
-                                    <a href="https://github.com/kc-ml2/mas-tutorials" target="_blank" rel="noreferrer">문서 수정하기</a>
-                                </button>
+                                이 문서에 기여하고 싶은 내용이 있으신가요? &nbsp; <a href={`https://github.com/kc-ml2/mas-tutorials/blob/main/posts/${postData.id}.md`} target="_blank" rel="noreferrer">github에서 문서를 수정하세요!</a>
                             </Row>
                             <hr></hr>
                             <Row id={styles.prenext}>

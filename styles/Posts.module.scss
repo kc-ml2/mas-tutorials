@@ -62,26 +62,6 @@
     color: $dark;
   }
 
-  // PRE {
-  //   background-color: $lightgray;
-  //   padding: 1rem;
-  //   color: $code;
-  //   border-radius: 5px;
-  //   line-height: 200%;
-
-  //   CODE {
-  //     color: $code;
-  //   }
-  // }
-
-  // CODE {
-  //   font-style: normal;
-  //   color: $red;
-  //   background-color: $lightgray;
-  //   border-radius: 5px;
-  //   padding: 0.2rem;
-  // }
-
   DEL {
     color: $green;
     text-decoration: none;
@@ -96,6 +76,10 @@
   h3 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+  }
+
+  h4 {
+    padding-top: 1.5rem;
   }
 
   h6 {
@@ -169,29 +153,14 @@
     margin: 0 auto;
     padding-top: 1rem;
   }
-
-  // Blockquote {
-  //   background-color: $lightgray;
-  //   padding-left: 1rem;
-  //   padding-right: 1rem;
-  //   padding-top: 0.5rem;
-  //   padding-bottom: 0.1rem;
-  //   border-left: 3px solid $code;
-  //   a {
-  //     color: $code;
-  //     font-weight: 700;
-  //   }
-  //   a:hover {
-  //     color: $purple;
-  //     text-decoration: none;
-  //   }
-  // }
 }
 
 .docs {
   display: flex;
   justify-content: flex-end;
   padding-right: 1rem;
+  font-size: 0.9rem;
+  color: $code;
 }
 
 #article {

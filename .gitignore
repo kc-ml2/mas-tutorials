@@ -17,6 +17,7 @@
 
 # misc
 .DS_Store
+.DS_Store.md
 *.pem
 
 # debug
@@ -32,3 +33,5 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+
