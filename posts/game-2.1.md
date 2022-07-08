@@ -28,8 +28,7 @@ observation = observations[0] # observation of 0 indexed snake
 ```
 
 `observations`는 모든 snake들의 observation이 묶여 있는 `np.array`이고, `(num_snakes, H, W, C)`의 shape을 가지고 있습니다. H는 grid의 height, W는 width, C는 channel입니다.
-observation을 featurize하여 8개의 채널을 구성하였으며, 각각
-grid의 **벽**, **과일**, 해당 인덱스 뱀 외의 뱀들의 **머리**, **몸**, **꼬리**, 그리고 해당 인덱스 뱀의 **머리**, **몸**, **꼬리** 순으로 표현된 binary grid feature 입니다.
+observation을 featurize하여 8개의 채널을 구성하였으며, 각각 grid의 **벽**, **과일**, 해당 인덱스 뱀 외의 뱀들의 **머리**, **몸**, **꼬리**, 그리고 해당 인덱스 뱀의 **머리**, **몸**, **꼬리** 순으로 표현된 binary grid feature 입니다.
 
 |                                                                            |                                                                           |
 | :------------------------------------------------------------------------: | :-----------------------------------------------------------------------: |
@@ -46,22 +45,14 @@ MARLenv는 연구자들이 훈련 환경의 구성요소를 필요에 따라 쉽
 `gym.make()`에 다음과 같은 argument들을 전달해 게임을 변형할 수 있습니다.
 
 1. map size → `heigth / width`
-
 2. number of snakes → `num_snakes`
-
 3. initial body length of snakes → `snake_length`
-
 4. vision range of snakes → `vision_range`
-
    뱀의 머리를 중심으로 상하좌우 vision_range만큼의 정사각형 grid 영역을 partial observation으로 반환합니다.  
    e.g.) vision_range가 5인 경우 observation shape는 (11, 11, 8)이 됩니다. 보다 자세한 내용은 이 [tutorial page](https://tutorials.kc-ml2.com/posts/game-1.1#113-cropped-image-with-dqn)를 참조하세요.
-
 5. number of frames to stack → `frame_stack`
-
    지정된 프레임 수 만큼의 과거 observation을 묶어서 반환합니다.
-
 6. action space → `observer`
-
    obsever 인자를 통해 action space를 변경할 수 있습니다.
    |||
    |:-|:-|
@@ -72,7 +63,6 @@ MARLenv는 연구자들이 훈련 환경의 구성요소를 필요에 따라 쉽
    `"human"`의 경우 (아무 행동 안하기, 상, 하, 좌, 우) 5가지의 action을 갖습니다.
 
 7. reward function → `reward_dict`
-
    매 step마다 agent가 받게 될 reward 또한 reward dictionary를 전달해 변경할 수 있습니다. 사과를 먹는 것과 상대방을 죽이는 것 이외에도 게임이 끝났을 때의 승패에 따라 보상을 주거나(`win`, `lose`) 매 step마다 일정한 패널티를 주는 것(`time`)도 가능합니다.
 
    ```python
@@ -86,7 +76,6 @@ MARLenv는 연구자들이 훈련 환경의 구성요소를 필요에 따라 쉽
    ```
 
 8. number of fruits on the map → `num_fruits`
-
    맵 위에 존재하는 사과의 갯수를 조절할 수도 있습니다. num_fruits만큼의 사과가 항상 맵 위에 존재하도록 사과가 생성됩니다. 기본값으로는 `(num_snakes * 0.8)`을 반올림한 만큼의 사과를 생성합니다.
 
 ### Wrappers
