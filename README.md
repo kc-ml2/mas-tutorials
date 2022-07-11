@@ -32,3 +32,7 @@
 - Visual Studio Code에서 Docker 컨테이너를 개발 환경으로 사용하실 수 있습니다.
 - Visaul Studio Code에서 `Remote-Container: Reopen in Container` 커맨드를 실행하시거나, 하단의 `Reopen in Container` 버튼을 누르신 후 사용 가능합니다.
 
+### License 
+- `posts` 폴더 안의 문서에는 [CC-BY-4.0 license](https://github.com/kc-ml2/mas-tutorials/blob/main/LICENSE)가 적용되고 있으며
+- 그 외 해당 repository의 코드에는 [MIT license](https://github.com/kc-ml2/mas-tutorials/blob/main/LICENSE-CODE)가 적용되어 있습니다. 
+
