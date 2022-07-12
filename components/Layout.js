@@ -11,6 +11,16 @@ export default function Layout({ children }) {
         <>
             <Head>
                 <title>MAS Tutorial</title>
+                <meta
+                    name="description"
+                    content={
+                        " 머신러닝 연구소 KC-ML2에서 제작한 '멀티에이전트 강화학습(MARL)' 튜토리얼"
+                    }
+                />
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <meta property="og:title" content={"MAS Tutorial"} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={"https://tutorials.kc-ml2.com/"} />
                 <link rel="icon" href="/favicon.png" />
                 <link
                     rel="stylesheet"

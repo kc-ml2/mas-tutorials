@@ -14,7 +14,7 @@ $btn-padding-x-lg: 30px !default;
 $btn-round-radius: 30px !default;
 $btn-round-radius-sm: 8px !default;
 
-// ML2 방문하기
+// type 1
 .ML2 {
   border: 1px solid $basic;
   border-radius: $btn-round-radius-sm;
@@ -37,7 +37,7 @@ $btn-round-radius-sm: 8px !default;
   outline: none;
 }
 
-//post index용 link
+// type 2
 .link {
   padding: 0;
   background-color: transparent;
@@ -61,7 +61,7 @@ $btn-round-radius-sm: 8px !default;
   outline: none;
 }
 
-// 문서 수정하기
+// type 3
 .docs {
   border: 1px solid $basic;
   border-radius: $btn-round-radius-sm;
