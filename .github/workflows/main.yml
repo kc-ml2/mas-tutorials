@@ -15,7 +15,7 @@ jobs:
   # 빌드 Job
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       # github repository에서 checkout
       - uses: actions/checkout@v2
