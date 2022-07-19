@@ -8,7 +8,7 @@ export default function ML2() {
 
     return (
         <div className={styles.ML2}>
-            <a href="https://www.kc-ml2.com" target="_blank" rel="noreferrer">
+            <a href="https://www.kc-ml2.com/?utm_source=mastutorial&utm_medium=cpc&utm_campaign=mastutorial_to_ml2&utm_id=mastutorial_to_ml2" target="_blank" rel="noreferrer">
                 <Image src={logo} alt="logo" width="93.3" height="70" />
                 <button className={button.ML2}>ML2 방문하기</button>
             </a>
