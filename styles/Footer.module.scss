@@ -5,9 +5,11 @@
   padding-right: 8%;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  background-color: #212529;
+  background-color: $dark;
   color: white;
-  min-height: 15vh;
+  width: 100vw;
+  // height: 20vh;
+  margin-top: auto;
   max-width: 4500px;
   margin: 0 auto;
 }

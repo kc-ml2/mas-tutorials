@@ -1,13 +1,19 @@
 @import './variable';
 
+#row {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 10rem;
+  min-height: 350px;
+}
+
 .main {
   margin: 5rem;
   margin-top: 10rem;
-  min-height: 80vh;
 
   a {
     color: $purple;
-    font-weight: 800;
+    font-weight: 600;
     outline: 0;
     font-size: 1.1rem;
   }
@@ -15,22 +21,97 @@
   a:hover {
     text-decoration: none;
   }
+
+  .giflogo {
+    text-align: center;
+  }
+
+  .description {
+    max-height: 350px;
+    max-width: 530px;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      flex: 1;
+      line-height: 50px;
+
+      #snakegame {
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 50px;
+      }
+
+      #multiagent {
+        font-weight: 700;
+        font-size: 4rem;
+        color: $purple;
+      }
+
+      #tutorial {
+        font-weight: 700;
+        font-size: 4rem;
+      }
+    }
+
+    .text {
+      flex: 2;
+    }
+
+    .button {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 
-#row {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-top: 5rem;
-
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
+@media (max-width: 650px) {
+  #row {
+    margin-top: 5rem;
   }
+  .main {
+    margin: 0 auto;
+    padding: 1rem;
+    margin-bottom: 5rem;
 
-  h2 {
-    font-size: 1.8rem;
-  }
-  span {
-    line-height: 28px;
+    .giflogo {
+      width: 250px;
+      height: 250px;
+      margin: 0 auto;
+    }
+
+    .description {
+      margin: 0 auto;
+      min-width: 350px;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+
+      .title {
+        line-height: 30px;
+        white-space: nowrap;
+
+        #snakegame {
+          font-size: 1.2rem;
+          line-height: 30px;
+        }
+
+        #multiagent {
+          font-size: 3rem;
+          color: $purple;
+        }
+
+        #tutorial {
+          font-size: 3rem;
+        }
+      }
+
+      .button {
+        margin-top: 2rem;
+        max-width: 350px;
+        text-align: center;
+      }
+    }
   }
 }

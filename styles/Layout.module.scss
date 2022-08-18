@@ -1,0 +1,17 @@
+@import './variable';
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  .main {
+    flex: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .layout {
+    display: block;
+  }
+}

@@ -3,7 +3,7 @@
 .title {
   padding-left: 1rem;
   padding-top: 1rem;
-  color: $code;
+  color: $basic;
   font-size: 0.8rem;
   font-weight: 600;
 }
@@ -24,7 +24,7 @@
   }
 
   a {
-    color: $code !important;
+    color: $basic !important;
   }
 
   a:hover {
@@ -35,12 +35,12 @@
   .index {
     padding-right: 1rem;
     border: transparent;
-    color: $code;
+    color: $basic;
     background-color: $lightgray;
     margin-right: 0;
 
     a {
-      color: $code !important;
+      color: $basic !important;
     }
 
     b {

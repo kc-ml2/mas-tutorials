@@ -1,8 +1,13 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Poppins, Poppins_SemiBold, Poppins_Bold, Poppins_ExtraBold sans-serif;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+    'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    sans-serif;
 }
 
 a {
@@ -12,29 +17,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-
-@font-face {
-  font-family: 'Poppins';
-  font-weight: 300;
-  src: url("/font/Poppins-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'Poppins_SemiBold';
-  font-weight: 300;
-  src: url("/font/Poppins-SemiBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'Poppins_Bold';
-  font-weight: 300;
-  src: url("/font/Poppins-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'Poppins_ExtraBold';
-  font-weight: 300;
-  src: url("/font/Poppins-ExtraBold.ttf") format("truetype");
 }

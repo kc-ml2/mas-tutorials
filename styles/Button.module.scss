@@ -41,7 +41,7 @@ $btn-round-radius-sm: 8px !default;
 .link {
   padding: 0;
   background-color: transparent;
-  color: $code;
+  color: $basic;
   text-align: start;
   border: transparent;
   p {
@@ -86,4 +86,41 @@ $btn-round-radius-sm: 8px !default;
 .docs:active {
   border: 1px solid $purple;
   outline: none;
+}
+
+//type4
+.index {
+  background-color: $purple;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid $purple;
+  border-radius: 10px;
+  padding-top: $btn-padding-y;
+  padding-bottom: $btn-padding-y;
+  padding-right: $btn-padding-x;
+  padding-left: $btn-padding-x;
+  width: 160px;
+  height: 60px;
+  cursor: pointer;
+  a {
+    color: white !important;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 650px) {
+  .index {
+    width: 110px;
+    height: 50px;
+    padding-top: $btn-padding-y-sm;
+    padding-bottom: $btn-padding-y-sm;
+    padding-right: $btn-padding-x-sm;
+    padding-left: $btn-padding-x-sm;
+    font-size: 15px !important;
+    a {
+      font-size: 15px !important;
+    }
+  }
 }

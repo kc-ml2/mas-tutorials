@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import NavBar from './NavBar'
 import Footer from './Footer'
+import styles from '../styles/Layout.module.scss'
 import { GA_TRACKING_ID } from '../lib/gtag'
 
 // eslint-disable-next-line react/prop-types
@@ -48,9 +49,11 @@ export default function Layout({ children }) {
                     }}
                 />
             </Head>
-            <NavBar />
-            <main>{children}</main>
-            <Footer />
+            <section className={styles.layout}>
+                <NavBar />
+                <main className={styles.main}>{children}</main>
+                <Footer />
+            </section>
         </>
     )
 }

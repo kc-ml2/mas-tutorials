@@ -21,7 +21,7 @@ export default function Footer() {
                 </Col>
                 <Col md="4">
                     <div className={styles.copyright}>
-                        © 2022 KC-ML2 .All rights reserved.
+                        © 2022 KC-ML2. All rights reserved.
                     </div>
                 </Col>
                 <Col md="1">
