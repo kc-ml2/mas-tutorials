@@ -3,7 +3,7 @@ import Head from 'next/head'
 import NavBar from './NavBar'
 import Footer from './Footer'
 import styles from '../styles/Layout.module.scss'
-import { GA_TRACKING_ID } from '../lib/gtag'
+import { GA_TRACKING_ID, GA_TRACKING_ID_G4 } from '../lib/gtag'
 
 // eslint-disable-next-line react/prop-types
 export default function Layout({ children }) {
@@ -34,6 +34,20 @@ export default function Layout({ children }) {
                 {/* code theme  */}
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-one-light.css" rel="stylesheet" />
                 {/* Global site tag (gtag.js) - Google Analytics  */}
+                <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID_G4}`}></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', '${GA_TRACKING_ID_G4}', {
+                    page_path: window.location.pathname,
+                    });
+                    `,
+                    }}
+                />
                 <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}></script>
                 <script
                     dangerouslySetInnerHTML={{
@@ -48,6 +62,7 @@ export default function Layout({ children }) {
                     `,
                     }}
                 />
+
             </Head>
             <section className={styles.layout}>
                 <NavBar />
