@@ -5,7 +5,7 @@ order: 19
 cate: CH4
 ---
 
-### Preface
+## Preface
 
 이전 챕터에서는 single-agent algorithm을 multi-agent환경에 적용할 경우, 변화를 줄 수 있는 다양한 사항들이 어떤 결과를 가지고 오게 되는지 다뤘습니다. 하지만 진정한 multi-agent algorithm이라면 multi-agent인 상황에서 발생할 수 있는 문제들을 직접적으로 해결하는 algorithm이어야 합니다. Multi-snake 와 같이 free-for-all인 상황이고 한 agent가 action을 취할 수 있는 actor가 하나 뿐이라면 credit assignment 나 communication과 같은 문제는 존재하지 않습니다. 오히려 이런 상황에서의 가장 큰 문제는 상대방에 대한 정보의 부재입니다. 이는 챕터 2에서 다룬것과 같이 POMDP 문제를 만들게 될 수도 있으며 때로는 상대방에 대한 modeling을 요구할 수도 있습니다.
 

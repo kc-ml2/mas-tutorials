@@ -2,7 +2,6 @@
 import React from 'react'
 import { getAllPostIds, getPostData, getLearnPostsData, getGamePostsData } from '../../lib/posts'
 import styles from '../../styles/Posts.module.scss'
-import button from '../../styles/Button.module.scss'
 import TOC from '../../components/TOC'
 import ML2 from '../../components/ML2'
 import { Row, Col } from 'reactstrap'

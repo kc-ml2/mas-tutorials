@@ -4,32 +4,213 @@ import { Scrollbars } from 'react-custom-scrollbars'
 import { useIntersectionObserver } from '../lib/useIntersectionObserver'
 import { ListGroup, ListGroupItem } from 'reactstrap'
 import styles from '../styles/TOC.module.scss'
-
+import { LEARN_TITLE_ONE, LEARN_TITLE_TWO, LEARN_TITLE_THREE, LEARN_TITLE_FOUR, GAME_TITLE_ONE, GAME_TITLE_TWO } from '../utils/const'
+import MINITOC from './MINITOC'
 // eslint-disable-next-line react/prop-types
 const Toc = ({ content, type, cate, currentTitle }) => {
+
+    const Chapter = () => {
+        if (type === '배우기') {
+            if (cate === 'CH1' && currentTitle.slice(0, 3) === '1. ') {
+                return (
+                    <>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/learn-1.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.TWO}</a></p>
+                        <p><a href='/posts/learn-1.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.THREE}</a></p>
+                        <p><a href='/posts/learn-1.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.FOUR}</a></p>
+                    </>
+                )
+            } else if (cate === 'CH1' && currentTitle.slice(0, 3) === '1.1') {
+                return (
+                    <>
+                        <p><a href='/posts/learn-1intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.ONE}</a></p>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/learn-1.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.THREE}</a></p>
+                        <p><a href='/posts/learn-1.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.FOUR}</a></p>
+                    </>
+                )
+            } else if (cate === 'CH1' && currentTitle.slice(0, 3) === '1.2') {
+                return (
+                    <>
+                        <p><a href='/posts/learn-1intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.ONE}</a></p>
+                        <p><a href='/posts/learn-1.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.TWO}</a></p>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/learn-1.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.FOUR}</a></p>
+                    </>
+                )
+            } else if (cate === 'CH1' && currentTitle.slice(0, 3) === '1.3') {
+                return (
+                    <>
+                        <p><a href='/posts/learn-1intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.ONE}</a></p>
+                        <p><a href='/posts/learn-1.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.TWO}</a></p>
+                        <p><a href='/posts/learn-1.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.THREE}</a></p>
+                        <MINITOC content={content} />
+                    </>
+                )
+            } else if (cate === 'CH2' && currentTitle.slice(0, 3) === '2. ') {
+                return (
+                    <>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/learn-2.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.TWO}</a></p>
+                        <p><a href='/posts/learn-2.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.THREE}</a></p>
+                        <p><a href='/posts/learn-2.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.FOUR}</a></p>
+                    </>
+                )
+            } else if (cate === 'CH2' && currentTitle.slice(0, 3) === '2.1') {
+                return (
+                    <>
+                        <p><a href='/posts/learn-2intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.ONE}</a></p>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/learn-2.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.THREE}</a></p>
+                        <p><a href='/posts/learn-2.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.FOUR}</a></p>
+                    </>
+                )
+            } else if (cate === 'CH2' && currentTitle.slice(0, 3) === '2.2') {
+                return (
+                    <>
+                        <p><a href='/posts/learn-2intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.ONE}</a></p>
+                        <p><a href='/posts/learn-2.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.TWO}</a></p>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/learn-2.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.FOUR}</a></p>
+                    </>
+                )
+            } else if (cate === 'CH2' && currentTitle.slice(0, 3) === '2.3') {
+                return (
+                    <>
+                        <p><a href='/posts/learn-2intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.ONE}</a></p>
+                        <p><a href='/posts/learn-2.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.TWO}</a></p>
+                        <p><a href='/posts/learn-2.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.THREE}</a></p>
+                        <MINITOC content={content} />
+                    </>
+                )
+
+            } else if (cate === 'CH3' && currentTitle.slice(0, 3) === '3. ') {
+                return (
+                    <>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/learn-3.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.TWO}</a></p>
+                        <p><a href='/posts/learn-3.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.THREE}</a></p>
+                        <p><a href='/posts/learn-3.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FOUR}</a></p>
+                        <p><a href='/posts/learn-3.4' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FIVE}</a></p>
+                    </>
+                )
+            } else if (cate === 'CH3' && currentTitle.slice(0, 3) === '3.1') {
+                return (
+                    <>
+                        <p><a href='/posts/learn-3intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.ONE}</a></p>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/learn-3.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.THREE}</a></p>
+                        <p><a href='/posts/learn-3.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FOUR}</a></p>
+                        <p><a href='/posts/learn-3.4' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FIVE}</a></p>
+                    </>
+                )
+
+            } else if (cate === 'CH3' && currentTitle.slice(0, 3) === '3.2') {
+                return (
+                    <>
+                        <p><a href='/posts/learn-3intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.ONE}</a></p>
+                        <p><a href='/posts/learn-3.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.TWO}</a></p>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/learn-3.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FOUR}</a></p>
+                        <p><a href='/posts/learn-3.4' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FIVE}</a></p>
+                    </>
+                )
+
+            } else if (cate === 'CH3' && currentTitle.slice(0, 3) === '3.3') {
+                return (
+                    <>
+                        <p><a href='/posts/learn-3intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.ONE}</a></p>
+                        <p><a href='/posts/learn-3.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.TWO}</a></p>
+                        <p><a href='/posts/learn-3.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.THREE}</a></p>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/learn-3.4' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FIVE}</a></p>
+                    </>
+                )
+
+            } else if (cate === 'CH3' && currentTitle.slice(0, 3) === '3.4') {
+                return (
+                    <>
+                        <p><a href='/posts/learn-3intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.ONE}</a></p>
+                        <p><a href='/posts/learn-3.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.TWO}</a></p>
+                        <p><a href='/posts/learn-3.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.THREE}</a></p>
+                        <p><a href='/posts/learn-3.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FOUR}</a></p>
+                        <MINITOC content={content} />
+                    </>
+                )
+            } else if (cate === 'CH4' && currentTitle.slice(0, 3) === '4. ') {
+                return (
+                    <>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/learn-4.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_FOUR.TWO}</a></p>
+                        <p><a href='/posts/learn-4.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_FOUR.THREE}</a></p>
+                    </>
+                )
+            } else if (cate === 'CH4' && currentTitle.slice(0, 3) === '4.1') {
+                return (
+                    <>
+                        <p><a href='/posts/learn-4intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_FOUR.ONE}</a></p>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/learn-4.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_FOUR.THREE}</a></p>
+                    </>
+                )
+            } else if (cate === 'CH4' && currentTitle.slice(0, 3) === '4.2') {
+                return (
+                    <>
+                        <p><a href='/posts/learn-4intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_FOUR.ONE}</a></p>
+                        <p><a href='/posts/learn-4.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_FOUR.TWO}</a></p>
+                        <MINITOC content={content} />
+                    </>
+                )
+            }
+        }
+
+        else {
+            if (cate === 'part1' && currentTitle.slice(0, 3) === '1. ') {
+                return (
+                    <>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/game-1.1' style={{ marginLeft: '40px' }}>{GAME_TITLE_ONE.TWO}</a></p>
+                        <p><a href='/posts/game-1.2' style={{ marginLeft: '40px' }}>{GAME_TITLE_ONE.THREE}</a></p>
+                    </>
+                )
+            } else if (cate === 'part1' && currentTitle.slice(0, 3) === '1.1') {
+                return (
+                    <>
+                        <p><a href='/posts/game-1intro' style={{ marginLeft: '40px' }}>{GAME_TITLE_ONE.ONE}</a></p>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/game-1.2' style={{ marginLeft: '40px' }}>{GAME_TITLE_ONE.THREE}</a></p>
+                    </>
+                )
+            } else if (cate === 'part1' && currentTitle.slice(0, 3) === '1.2') {
+                return (
+                    <>
+                        <p><a href='/posts/game-1intro' style={{ marginLeft: '40px' }}>{GAME_TITLE_ONE.ONE}</a></p>
+                        <p><a href='/posts/game-1.1' style={{ marginLeft: '40px' }}>{GAME_TITLE_ONE.TWO}</a></p>
+                        <MINITOC content={content} />
+                    </>
+                )
+            } else if (cate === 'part2' && currentTitle.slice(0, 3) === '2. ') {
+                return (
+                    <>
+                        <MINITOC content={content} />
+                        <p><a href='/posts/game-2.1' style={{ marginLeft: '40px' }}>{GAME_TITLE_TWO.TWO}</a></p>
+                    </>
+                )
+            } else if (cate === 'part2' && currentTitle.slice(0, 3) === '2.1') {
+                return (
+                    <>
+                        <p><a href='/posts/game-2intro' style={{ marginLeft: '40px' }}>{GAME_TITLE_TWO.ONE}</a></p>
+                        <MINITOC content={content} />
+                    </>
+                )
+            }
+        }
+    }
+
 
     const [activeId, setActiveId] = useState('')
 
     useIntersectionObserver(setActiveId, content)
-
-    const titles = content.split(`\n`).filter((t) => t.includes('# '))
-
-    const result = titles
-        .filter((str) => str[0] === '#')
-        .map((item) => {
-            let count = item.match(/#/g)?.length;
-            if (count) {
-                count = count * 10
-            }
-
-            return {
-                title: item.split('# ')[1].replace(/`/g, '').trim(),
-                // eslint-disable-next-line no-misleading-character-class
-                anchor: item.split('# ')[1].replace(/`/g, '').replace(/[*/():.?!"&,📌🔎🗂️🗒️🎙️🏁]/gi, "").toLowerCase().replace(/ /gi, "-"),
-                count
-            }
-        })
-
 
     //** TOC */ 
     return (
@@ -38,25 +219,7 @@ const Toc = ({ content, type, cate, currentTitle }) => {
                 <Scrollbars universal={true} autoHide autoHeight autoHeightMax="calc(100vh)">
                     <section className={styles.title}>{type} {cate}</section>
                     <hr></hr>
-                    {result.map((item, idx) => {
-                        if (item?.count && item.count <= 30 && item?.title) {
-                            return (
-                                <ListGroupItem
-                                    id={styles.notActive}
-                                    key={item.title + idx}
-                                    style={{ marginLeft: `${item.count}px`, }}
-                                    className={clsx(
-                                        activeId === item.anchor && styles.current
-                                    )}>
-                                    <a
-                                        href={`#${item.anchor}`}
-                                    >
-                                        {item.title}
-                                    </a>
-                                </ListGroupItem>
-                            );
-                        }
-                    })}
+                    <Chapter />
                 </Scrollbars>
             </ListGroup>
         </div>

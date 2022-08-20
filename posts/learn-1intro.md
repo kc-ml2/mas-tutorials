@@ -5,7 +5,7 @@ order: 6
 cate: CH1
 ---
 
-### Preface
+## Preface
 
 이 튜토리얼은 **Multi-agent** 문제를 **Deep Reinforcement Learning (DRL)** 의 관점으로 바라보며 [~MARLenv~](https://github.com/kc-ml2/MARLenv)를 사용함에 있어 multi-agent문제의 접근법을 더욱 확장시키고 싶은 분들을 위한 정보를 제공합니다. 특히나 강화학습의 측면에서의 multi-agent 문제를 다루기 위해서는 아주 많은 이론적 배경지식을 요구하지만 이 튜토리얼에서는 최대한 힘을 빼고 조금 더 개념적으로 접근하려합니다. 만약 튜토리얼 전체를 하나의 개념으로 요약한다면 free-for-all 한 상황에서의 Multi-agent Deep Reinforcement Learning (MDRL)으로 요약할 수 있을텐데 본론으로 들어가기에 앞서 이 MDRL을 한 단어씩 떼어서 살펴보는 것으로 시작하겠습니다.
 

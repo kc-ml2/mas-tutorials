@@ -5,7 +5,7 @@ order: 14
 cate: CH3
 ---
 
-### Preface
+## Preface
 
 앞서 챕터 2에서는 MARL이라는 틀 안에서 문제를 정의하는 방법과 MARL이라는 분야에서 해결하고자 하는 문제들을 소개했습니다. 이번챕터에서는 그중 Analysis of emergent behaviors에 집중하여 일반적인 single agent training scheme을 multi-agent snake게임에 적용시킬때 MARL관점에서 고민하고 바꿔볼 수 있는 사항들을 기존에 발표된 다양한 논문들을 통해 소개하겠습니다.
 

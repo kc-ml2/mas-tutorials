@@ -5,7 +5,7 @@ order: 20
 cate: CH4
 ---
 
-### 4.1. MADDPG
+## 4.1. MADDPG
 
 Multi-Agent Deep Deterministic Policy Gradient(MADDPG)는 2017년 발표된 _Lowe et al._ 의 [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/abs/1706.02275)에서 소개된 알고리즘으로 기존 DDPG 알고리즘을 Multi-Agent의 영역으로 확장하였습니다. MA 세팅은 이론적인 면에서나 실용적인 측면에서나 매력적이지만 여러 Agent가 게임 내에 존재함으로 생기는 env의 non-stationarity 때문에 기존 single-agent의 접근방식으로는 학습이 어려웠습니다. MADDPG는 **Centralized training과 Decentralized execution**을 이용해 이 문제를 해결하였고 여러 multi-agent 환경에서 다양한 task를 수행하며 agent간의 competition과 cooperation, 그리고 이 둘의 mixed strategy까지 학습하는 데 성공했습니다. 뿐만아니라 explicit한 communication 구조 없이도 여러 agent간의 **communication 통한 coordination**이 가능함을 보여주었습니다.
 
