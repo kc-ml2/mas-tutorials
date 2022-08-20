@@ -1,17 +1,14 @@
 @import './variable';
 
 .layout {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-
-  .main {
-    flex: 1;
-  }
+  display: grid;
+  grid-template-rows: 6fr 1fr;
+  height: 100vh;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 950px) {
   .layout {
-    display: block;
+    height: 100%;
+    grid-template-rows: 1fr 11rem;
   }
 }

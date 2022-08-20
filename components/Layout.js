@@ -67,7 +67,7 @@ export default function Layout({ children }) {
             <section className={styles.layout}>
                 <NavBar />
                 <main className={styles.main}>{children}</main>
-                <Footer />
+                <Footer className={styles.footer} />
             </section>
         </>
     )
