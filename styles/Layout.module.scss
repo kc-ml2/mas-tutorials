@@ -9,6 +9,10 @@
 @media (max-width: 950px) {
   .layout {
     height: 100%;
-    grid-template-rows: 1fr 11rem;
+    grid-template-rows: 5fr 1fr;
+    .main {
+      height: 100vh;
+      margin-top: 1rem;
+    }
   }
 }
