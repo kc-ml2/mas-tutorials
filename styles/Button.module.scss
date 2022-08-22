@@ -110,6 +110,10 @@ $btn-round-radius-sm: 8px !default;
   }
 }
 
+.index:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 950px) {
   .index {
     width: 110px;

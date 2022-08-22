@@ -1,4 +1,3 @@
-import clsx from 'clsx'
 import React, { useState } from 'react'
 import { Scrollbars } from 'react-custom-scrollbars'
 import { useIntersectionObserver } from '../lib/useIntersectionObserver'
@@ -15,35 +14,35 @@ const Toc = ({ content, type, cate, currentTitle }) => {
                 return (
                     <>
                         <MINITOC content={content} />
-                        <p><a href='/posts/learn-1.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.TWO}</a></p>
-                        <p><a href='/posts/learn-1.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.THREE}</a></p>
-                        <p><a href='/posts/learn-1.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.FOUR}</a></p>
+                        <p><a href='/posts/learn-1.1' id={styles.chapter}>{LEARN_TITLE_ONE.TWO}</a></p>
+                        <p><a href='/posts/learn-1.2' id={styles.chapter}>{LEARN_TITLE_ONE.THREE}</a></p>
+                        <p><a href='/posts/learn-1.3' id={styles.chapter}>{LEARN_TITLE_ONE.FOUR}</a></p>
                     </>
                 )
             } else if (cate === 'CH1' && currentTitle.slice(0, 3) === '1.1') {
                 return (
                     <>
-                        <p><a href='/posts/learn-1intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.ONE}</a></p>
+                        <p><a href='/posts/learn-1intro' id={styles.chapter}>{LEARN_TITLE_ONE.ONE}</a></p>
                         <MINITOC content={content} />
-                        <p><a href='/posts/learn-1.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.THREE}</a></p>
-                        <p><a href='/posts/learn-1.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.FOUR}</a></p>
+                        <p><a href='/posts/learn-1.2' id={styles.chapter}>{LEARN_TITLE_ONE.THREE}</a></p>
+                        <p><a href='/posts/learn-1.3' id={styles.chapter}>{LEARN_TITLE_ONE.FOUR}</a></p>
                     </>
                 )
             } else if (cate === 'CH1' && currentTitle.slice(0, 3) === '1.2') {
                 return (
                     <>
-                        <p><a href='/posts/learn-1intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.ONE}</a></p>
-                        <p><a href='/posts/learn-1.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.TWO}</a></p>
+                        <p><a href='/posts/learn-1intro' id={styles.chapter}>{LEARN_TITLE_ONE.ONE}</a></p>
+                        <p><a href='/posts/learn-1.1' id={styles.chapter}>{LEARN_TITLE_ONE.TWO}</a></p>
                         <MINITOC content={content} />
-                        <p><a href='/posts/learn-1.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.FOUR}</a></p>
+                        <p><a href='/posts/learn-1.3' id={styles.chapter}>{LEARN_TITLE_ONE.FOUR}</a></p>
                     </>
                 )
             } else if (cate === 'CH1' && currentTitle.slice(0, 3) === '1.3') {
                 return (
                     <>
-                        <p><a href='/posts/learn-1intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.ONE}</a></p>
-                        <p><a href='/posts/learn-1.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.TWO}</a></p>
-                        <p><a href='/posts/learn-1.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_ONE.THREE}</a></p>
+                        <p><a href='/posts/learn-1intro' id={styles.chapter}>{LEARN_TITLE_ONE.ONE}</a></p>
+                        <p><a href='/posts/learn-1.1' id={styles.chapter}>{LEARN_TITLE_ONE.TWO}</a></p>
+                        <p><a href='/posts/learn-1.2' id={styles.chapter}>{LEARN_TITLE_ONE.THREE}</a></p>
                         <MINITOC content={content} />
                     </>
                 )
@@ -51,35 +50,35 @@ const Toc = ({ content, type, cate, currentTitle }) => {
                 return (
                     <>
                         <MINITOC content={content} />
-                        <p><a href='/posts/learn-2.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.TWO}</a></p>
-                        <p><a href='/posts/learn-2.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.THREE}</a></p>
-                        <p><a href='/posts/learn-2.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.FOUR}</a></p>
+                        <p><a href='/posts/learn-2.1' id={styles.chapter}>{LEARN_TITLE_TWO.TWO}</a></p>
+                        <p><a href='/posts/learn-2.2' id={styles.chapter}>{LEARN_TITLE_TWO.THREE}</a></p>
+                        <p><a href='/posts/learn-2.3' id={styles.chapter}>{LEARN_TITLE_TWO.FOUR}</a></p>
                     </>
                 )
             } else if (cate === 'CH2' && currentTitle.slice(0, 3) === '2.1') {
                 return (
                     <>
-                        <p><a href='/posts/learn-2intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.ONE}</a></p>
+                        <p><a href='/posts/learn-2intro' id={styles.chapter}>{LEARN_TITLE_TWO.ONE}</a></p>
                         <MINITOC content={content} />
-                        <p><a href='/posts/learn-2.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.THREE}</a></p>
-                        <p><a href='/posts/learn-2.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.FOUR}</a></p>
+                        <p><a href='/posts/learn-2.2' id={styles.chapter}>{LEARN_TITLE_TWO.THREE}</a></p>
+                        <p><a href='/posts/learn-2.3' id={styles.chapter}>{LEARN_TITLE_TWO.FOUR}</a></p>
                     </>
                 )
             } else if (cate === 'CH2' && currentTitle.slice(0, 3) === '2.2') {
                 return (
                     <>
-                        <p><a href='/posts/learn-2intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.ONE}</a></p>
-                        <p><a href='/posts/learn-2.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.TWO}</a></p>
+                        <p><a href='/posts/learn-2intro' id={styles.chapter}>{LEARN_TITLE_TWO.ONE}</a></p>
+                        <p><a href='/posts/learn-2.1' id={styles.chapter}>{LEARN_TITLE_TWO.TWO}</a></p>
                         <MINITOC content={content} />
-                        <p><a href='/posts/learn-2.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.FOUR}</a></p>
+                        <p><a href='/posts/learn-2.3' id={styles.chapter}>{LEARN_TITLE_TWO.FOUR}</a></p>
                     </>
                 )
             } else if (cate === 'CH2' && currentTitle.slice(0, 3) === '2.3') {
                 return (
                     <>
-                        <p><a href='/posts/learn-2intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.ONE}</a></p>
-                        <p><a href='/posts/learn-2.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.TWO}</a></p>
-                        <p><a href='/posts/learn-2.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_TWO.THREE}</a></p>
+                        <p><a href='/posts/learn-2intro' id={styles.chapter}>{LEARN_TITLE_TWO.ONE}</a></p>
+                        <p><a href='/posts/learn-2.1' id={styles.chapter}>{LEARN_TITLE_TWO.TWO}</a></p>
+                        <p><a href='/posts/learn-2.2' id={styles.chapter}>{LEARN_TITLE_TWO.THREE}</a></p>
                         <MINITOC content={content} />
                     </>
                 )
@@ -88,52 +87,52 @@ const Toc = ({ content, type, cate, currentTitle }) => {
                 return (
                     <>
                         <MINITOC content={content} />
-                        <p><a href='/posts/learn-3.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.TWO}</a></p>
-                        <p><a href='/posts/learn-3.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.THREE}</a></p>
-                        <p><a href='/posts/learn-3.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FOUR}</a></p>
-                        <p><a href='/posts/learn-3.4' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FIVE}</a></p>
+                        <p><a href='/posts/learn-3.1' id={styles.chapter}>{LEARN_TITLE_THREE.TWO}</a></p>
+                        <p><a href='/posts/learn-3.2' id={styles.chapter}>{LEARN_TITLE_THREE.THREE}</a></p>
+                        <p><a href='/posts/learn-3.3' id={styles.chapter}>{LEARN_TITLE_THREE.FOUR}</a></p>
+                        <p><a href='/posts/learn-3.4' id={styles.chapter}>{LEARN_TITLE_THREE.FIVE}</a></p>
                     </>
                 )
             } else if (cate === 'CH3' && currentTitle.slice(0, 3) === '3.1') {
                 return (
                     <>
-                        <p><a href='/posts/learn-3intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.ONE}</a></p>
+                        <p><a href='/posts/learn-3intro' id={styles.chapter}>{LEARN_TITLE_THREE.ONE}</a></p>
                         <MINITOC content={content} />
-                        <p><a href='/posts/learn-3.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.THREE}</a></p>
-                        <p><a href='/posts/learn-3.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FOUR}</a></p>
-                        <p><a href='/posts/learn-3.4' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FIVE}</a></p>
+                        <p><a href='/posts/learn-3.2' id={styles.chapter}>{LEARN_TITLE_THREE.THREE}</a></p>
+                        <p><a href='/posts/learn-3.3' id={styles.chapter}>{LEARN_TITLE_THREE.FOUR}</a></p>
+                        <p><a href='/posts/learn-3.4' id={styles.chapter}>{LEARN_TITLE_THREE.FIVE}</a></p>
                     </>
                 )
 
             } else if (cate === 'CH3' && currentTitle.slice(0, 3) === '3.2') {
                 return (
                     <>
-                        <p><a href='/posts/learn-3intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.ONE}</a></p>
-                        <p><a href='/posts/learn-3.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.TWO}</a></p>
+                        <p><a href='/posts/learn-3intro' id={styles.chapter}>{LEARN_TITLE_THREE.ONE}</a></p>
+                        <p><a href='/posts/learn-3.1' id={styles.chapter}>{LEARN_TITLE_THREE.TWO}</a></p>
                         <MINITOC content={content} />
-                        <p><a href='/posts/learn-3.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FOUR}</a></p>
-                        <p><a href='/posts/learn-3.4' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FIVE}</a></p>
+                        <p><a href='/posts/learn-3.3' id={styles.chapter}>{LEARN_TITLE_THREE.FOUR}</a></p>
+                        <p><a href='/posts/learn-3.4' id={styles.chapter}>{LEARN_TITLE_THREE.FIVE}</a></p>
                     </>
                 )
 
             } else if (cate === 'CH3' && currentTitle.slice(0, 3) === '3.3') {
                 return (
                     <>
-                        <p><a href='/posts/learn-3intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.ONE}</a></p>
-                        <p><a href='/posts/learn-3.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.TWO}</a></p>
-                        <p><a href='/posts/learn-3.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.THREE}</a></p>
+                        <p><a href='/posts/learn-3intro' id={styles.chapter}>{LEARN_TITLE_THREE.ONE}</a></p>
+                        <p><a href='/posts/learn-3.1' id={styles.chapter}>{LEARN_TITLE_THREE.TWO}</a></p>
+                        <p><a href='/posts/learn-3.2' id={styles.chapter}>{LEARN_TITLE_THREE.THREE}</a></p>
                         <MINITOC content={content} />
-                        <p><a href='/posts/learn-3.4' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FIVE}</a></p>
+                        <p><a href='/posts/learn-3.4' id={styles.chapter}>{LEARN_TITLE_THREE.FIVE}</a></p>
                     </>
                 )
 
             } else if (cate === 'CH3' && currentTitle.slice(0, 3) === '3.4') {
                 return (
                     <>
-                        <p><a href='/posts/learn-3intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.ONE}</a></p>
-                        <p><a href='/posts/learn-3.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.TWO}</a></p>
-                        <p><a href='/posts/learn-3.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.THREE}</a></p>
-                        <p><a href='/posts/learn-3.3' style={{ marginLeft: '40px' }}>{LEARN_TITLE_THREE.FOUR}</a></p>
+                        <p><a href='/posts/learn-3intro' id={styles.chapter}>{LEARN_TITLE_THREE.ONE}</a></p>
+                        <p><a href='/posts/learn-3.1' id={styles.chapter}>{LEARN_TITLE_THREE.TWO}</a></p>
+                        <p><a href='/posts/learn-3.2' id={styles.chapter}>{LEARN_TITLE_THREE.THREE}</a></p>
+                        <p><a href='/posts/learn-3.3' id={styles.chapter}>{LEARN_TITLE_THREE.FOUR}</a></p>
                         <MINITOC content={content} />
                     </>
                 )
@@ -141,23 +140,23 @@ const Toc = ({ content, type, cate, currentTitle }) => {
                 return (
                     <>
                         <MINITOC content={content} />
-                        <p><a href='/posts/learn-4.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_FOUR.TWO}</a></p>
-                        <p><a href='/posts/learn-4.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_FOUR.THREE}</a></p>
+                        <p><a href='/posts/learn-4.1' id={styles.chapter}>{LEARN_TITLE_FOUR.TWO}</a></p>
+                        <p><a href='/posts/learn-4.2' id={styles.chapter}>{LEARN_TITLE_FOUR.THREE}</a></p>
                     </>
                 )
             } else if (cate === 'CH4' && currentTitle.slice(0, 3) === '4.1') {
                 return (
                     <>
-                        <p><a href='/posts/learn-4intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_FOUR.ONE}</a></p>
+                        <p><a href='/posts/learn-4intro' id={styles.chapter}>{LEARN_TITLE_FOUR.ONE}</a></p>
                         <MINITOC content={content} />
-                        <p><a href='/posts/learn-4.2' style={{ marginLeft: '40px' }}>{LEARN_TITLE_FOUR.THREE}</a></p>
+                        <p><a href='/posts/learn-4.2' id={styles.chapter}>{LEARN_TITLE_FOUR.THREE}</a></p>
                     </>
                 )
             } else if (cate === 'CH4' && currentTitle.slice(0, 3) === '4.2') {
                 return (
                     <>
-                        <p><a href='/posts/learn-4intro' style={{ marginLeft: '40px' }}>{LEARN_TITLE_FOUR.ONE}</a></p>
-                        <p><a href='/posts/learn-4.1' style={{ marginLeft: '40px' }}>{LEARN_TITLE_FOUR.TWO}</a></p>
+                        <p><a href='/posts/learn-4intro' id={styles.chapter}>{LEARN_TITLE_FOUR.ONE}</a></p>
+                        <p><a href='/posts/learn-4.1' id={styles.chapter}>{LEARN_TITLE_FOUR.TWO}</a></p>
                         <MINITOC content={content} />
                     </>
                 )
@@ -169,23 +168,23 @@ const Toc = ({ content, type, cate, currentTitle }) => {
                 return (
                     <>
                         <MINITOC content={content} />
-                        <p><a href='/posts/game-1.1' style={{ marginLeft: '40px' }}>{GAME_TITLE_ONE.TWO}</a></p>
-                        <p><a href='/posts/game-1.2' style={{ marginLeft: '40px' }}>{GAME_TITLE_ONE.THREE}</a></p>
+                        <p><a href='/posts/game-1.1' id={styles.chapter}>{GAME_TITLE_ONE.TWO}</a></p>
+                        <p><a href='/posts/game-1.2' id={styles.chapter}>{GAME_TITLE_ONE.THREE}</a></p>
                     </>
                 )
             } else if (cate === 'part1' && currentTitle.slice(0, 3) === '1.1') {
                 return (
                     <>
-                        <p><a href='/posts/game-1intro' style={{ marginLeft: '40px' }}>{GAME_TITLE_ONE.ONE}</a></p>
+                        <p><a href='/posts/game-1intro' id={styles.chapter}>{GAME_TITLE_ONE.ONE}</a></p>
                         <MINITOC content={content} />
-                        <p><a href='/posts/game-1.2' style={{ marginLeft: '40px' }}>{GAME_TITLE_ONE.THREE}</a></p>
+                        <p><a href='/posts/game-1.2' id={styles.chapter}>{GAME_TITLE_ONE.THREE}</a></p>
                     </>
                 )
             } else if (cate === 'part1' && currentTitle.slice(0, 3) === '1.2') {
                 return (
                     <>
-                        <p><a href='/posts/game-1intro' style={{ marginLeft: '40px' }}>{GAME_TITLE_ONE.ONE}</a></p>
-                        <p><a href='/posts/game-1.1' style={{ marginLeft: '40px' }}>{GAME_TITLE_ONE.TWO}</a></p>
+                        <p><a href='/posts/game-1intro' id={styles.chapter}>{GAME_TITLE_ONE.ONE}</a></p>
+                        <p><a href='/posts/game-1.1' id={styles.chapter}>{GAME_TITLE_ONE.TWO}</a></p>
                         <MINITOC content={content} />
                     </>
                 )
@@ -193,13 +192,13 @@ const Toc = ({ content, type, cate, currentTitle }) => {
                 return (
                     <>
                         <MINITOC content={content} />
-                        <p><a href='/posts/game-2.1' style={{ marginLeft: '40px' }}>{GAME_TITLE_TWO.TWO}</a></p>
+                        <p><a href='/posts/game-2.1' id={styles.chapter}>{GAME_TITLE_TWO.TWO}</a></p>
                     </>
                 )
             } else if (cate === 'part2' && currentTitle.slice(0, 3) === '2.1') {
                 return (
                     <>
-                        <p><a href='/posts/game-2intro' style={{ marginLeft: '40px' }}>{GAME_TITLE_TWO.ONE}</a></p>
+                        <p><a href='/posts/game-2intro' id={styles.chapter}>{GAME_TITLE_TWO.ONE}</a></p>
                         <MINITOC content={content} />
                     </>
                 )
