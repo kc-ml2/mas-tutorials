@@ -69,7 +69,7 @@
   #row {
     flex-wrap: wrap;
     position: relative;
-    margin-top: 5rem;
+    margin-top: 50%;
 
     .giflogo {
       width: 250px;
@@ -107,5 +107,19 @@
         text-align: center;
       }
     }
+  }
+}
+
+@media (max-width: 600px) {
+  #row {
+    margin-top: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  #row {
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 120%;
   }
 }
