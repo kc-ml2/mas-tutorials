@@ -30,11 +30,11 @@ observation = observations[0] # observation of 0 indexed snake
 `observations`는 모든 snake들의 observation이 묶여 있는 `np.array`이고, `(num_snakes, H, W, C)`의 shape을 가지고 있습니다. H는 grid의 height, W는 width, C는 channel입니다.
 observation을 featurize하여 8개의 채널을 구성하였으며, 각각 grid의 **벽**, **과일**, 해당 인덱스 뱀 외의 뱀들의 **머리**, **몸**, **꼬리**, 그리고 해당 인덱스 뱀의 **머리**, **몸**, **꼬리** 순으로 표현된 binary grid feature 입니다.
 
-|                                                                            |                                                                           |
-| :------------------------------------------------------------------------: | :-----------------------------------------------------------------------: |
-| ![render](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/game1.png) | ![final](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/game2.png) |
+|                                                                          |                                                                          |
+| :----------------------------------------------------------------------: | :----------------------------------------------------------------------: |
+| ![full](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/game1.png) | ![full](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/game2.png) |
 
-![split](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/game3.png)
+![full](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/game3.png)
 
 ### Snake game 변형하기
 
@@ -57,7 +57,7 @@ MARLenv는 연구자들이 훈련 환경의 구성요소를 필요에 따라 쉽
    |||
    |:-|:-|
    |snake|human|
-   |![snake](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/game4.png)|![human](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/game5.png)|
+   |![full](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/game4.png)|![full](https://mas-tutorials.s3.ap-northeast-2.amazonaws.com/game5.png)|
 
    `"snake"`의 경우 (전진, 좌회전, 우회전) 3가지의 action을 갖고
    `"human"`의 경우 (아무 행동 안하기, 상, 하, 좌, 우) 5가지의 action을 갖습니다.
