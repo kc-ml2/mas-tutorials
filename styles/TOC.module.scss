@@ -71,6 +71,11 @@
   }
 }
 
+#chapter {
+  padding-left: 40px;
+  display: inline-block;
+}
+
 @media (max-width: 950px) {
   .all {
     display: none;
