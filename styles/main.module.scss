@@ -89,13 +89,11 @@
   #row {
     margin-top: 5rem;
     margin-bottom: 5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
     text-align: center;
 
     .giflogo {
-      max-width: 400px;
-      max-height: 400px;
+      max-width: 70vw;
+      max-height: 70vw;
       grid-row: 1;
       grid-column: 1;
       margin: 0 auto;
