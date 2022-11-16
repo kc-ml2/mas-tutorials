@@ -1,17 +1,16 @@
 @import './variable';
 
 .ML2 {
-    max-width: 120px;
-    position: fixed;
-    top: 9rem;
-    right: 1rem;
-    text-align: center;
-    margin-left:1rem;
+  max-width: 120px;
+  position: fixed;
+  top: 9rem;
+  right: calc((100vw - 1200px) / 2);
+  text-align: center;
+  margin-left: 1rem;
 }
 
 @media (max-width: 1250px) {
-    .ML2 {
-       display: none;
-    }
-    
+  .ML2 {
+    display: none;
+  }
 }

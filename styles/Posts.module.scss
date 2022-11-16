@@ -2,10 +2,9 @@
 
 .row {
   margin-bottom: 5rem;
-  margin-top: 5rem;
-  min-height: 90vh;
   word-wrap: break-word;
-  max-width: 1500px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -26,11 +25,9 @@
   line-height: 40px;
   word-spacing: 0.8px;
   font-weight: 300;
-  padding-left: 3rem;
-  padding-right: 3rem;
   padding-bottom: 3rem;
-  max-width: 950px;
-  margin-top: 8rem;
+  width: 100%;
+  margin-top: 4rem;
   margin-bottom: 4rem;
   font-weight: 400;
 
@@ -182,6 +179,9 @@
 @media (max-width: 1250px) {
   .ML2Link {
     display: none;
+  }
+  .post {
+    margin-right: 1rem;
   }
 }
 

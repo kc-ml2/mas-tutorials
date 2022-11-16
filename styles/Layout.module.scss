@@ -1,17 +1,9 @@
 @import './variable';
 
-.layout {
-  display: grid;
-  grid-template-rows: 6fr 1fr;
-  height: 100vh;
-}
-
-@media (max-width: 950px) {
-  .layout {
-    height: 100%;
-    display: inline;
-    .main {
-      margin-top: 1rem;
-    }
-  }
+.main {
+  min-height: 75vh;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
 }

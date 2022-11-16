@@ -1,29 +1,27 @@
 @import './variable';
 
 #row {
-  max-width: 1000px;
+  display: grid;
   margin: 0 auto;
-  position: fixed;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  max-width: 1000px;
+  width: 100%;
+  grid-template-columns: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 
   .giflogo {
-    text-align: center;
     width: 400px;
+    grid-row: 1;
+    grid-column: 1;
   }
 
   .description {
-    max-height: 350px;
+    grid-row: 1;
+    grid-column: 2;
+    height: 350px;
     width: 530px;
-    display: flex;
-    flex-direction: column;
 
     .title {
-      flex: 1;
       line-height: 50px;
 
       #snakegame {
@@ -45,7 +43,6 @@
     }
 
     .text {
-      flex: 2;
       a {
         color: $purple;
         font-weight: 600;
@@ -65,61 +62,82 @@
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
   #row {
-    flex-wrap: wrap;
-    position: relative;
-    margin-top: 50%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    min-height: 90vh;
+    text-align: center;
+    .giflogo {
+      max-width: 600px;
+      grid-row: 1;
+      grid-column: 1;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .description {
+      max-width: 600px;
+      height: 500px;
+      grid-row: 2;
+      grid-column: 1;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  #row {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
 
     .giflogo {
-      width: 250px;
-      height: 250px;
+      max-width: 400px;
+      max-height: 400px;
+      grid-row: 1;
+      grid-column: 1;
       margin: 0 auto;
-      margin-bottom: 2rem;
+      text-align: center;
     }
-
     .description {
+      max-width: 90vw;
+      grid-row: 2;
+      grid-column: 1;
       margin: 0 auto;
-      width: 350px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  #row {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    height: 100%;
+    .giflogo {
+      max-width: 200px;
+      grid-row: 1;
+      grid-column: 1;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .description {
+      width: 90vw;
+      grid-row: 2;
+      grid-column: 1;
+      margin: 0 auto;
+      margin-bottom: 5rem;
 
       .title {
-        line-height: 30px;
-        white-space: nowrap;
-
-        #snakegame {
-          font-size: 1.2rem;
-          line-height: 30px;
-        }
-
         #multiagent {
           font-size: 3rem;
-          color: $purple;
         }
 
         #tutorial {
           font-size: 3rem;
         }
       }
-
-      .button {
-        margin-top: 2rem;
-        max-width: 350px;
-        text-align: center;
-      }
     }
-  }
-}
-
-@media (max-width: 600px) {
-  #row {
-    margin-top: 100%;
-  }
-}
-
-@media (max-width: 400px) {
-  #row {
-    flex-wrap: wrap;
-    position: relative;
-    margin-top: 120%;
   }
 }

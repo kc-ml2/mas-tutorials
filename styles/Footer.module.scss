@@ -1,46 +1,74 @@
 @import './variable';
 
+.container {
+  background-color: black;
+}
+
 .footer {
-  padding-left: 8%;
-  padding-right: 8%;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  background-color: $dark;
   color: white;
-  width: 100vw;
-  margin-top: auto;
-  max-width: 4500px;
+  min-height: 18vh;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-}
+  display: grid;
+  grid-template-columns: auto;
+  font-size: 12px;
+  padding: 0;
 
-.copyright {
-  font-size: 0.8rem;
-  text-align: center;
-}
+  .one {
+    grid-row: 1;
+    grid-column: 1;
+    display: inline-flex;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 
-.icon {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  .two {
+    grid-row: 1;
+    grid-column: 2;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 
-  .iconItem {
-    min-width: 24px;
-    min-height: 24px;
-    margin-right: 1.5rem;
+  .three {
+    grid-row: 1;
+    grid-column: 3;
+    display: inline-flex;
+    justify-content: end;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0;
+    a {
+      margin-left: 1rem;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
   }
 }
 
-.toggle {
-  margin: -10px;
-}
+@media (max-width: 1200px) {
+  .footer {
+    text-align: left !important;
+    padding-left: 1rem;
 
-@media (max-width: 800px) {
-  .copyright {
-    padding-top: 1rem;
-    text-align: start;
-  }
-
-  .icon {
-    padding-top: 1rem;
+    .one {
+      grid-row: 1;
+      grid-column: 1;
+    }
+    .two {
+      grid-row: 2;
+      grid-column: 1;
+      justify-content: start;
+    }
+    .three {
+      grid-row: 3;
+      grid-column: 1;
+      justify-content: start;
+      margin-left: 0;
+      margin-right: auto;
+    }
   }
 }
